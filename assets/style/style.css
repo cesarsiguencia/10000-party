@@ -1,9 +1,66 @@
 :root {
     --primary-color: green;
-    --secondary-color: 
+    --secondary-color: ;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;      
+    box-sizing: border-box
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;      
+    box-sizing: border-box
 }
 
 h1{
     color: var(--primary-color)
+}
+
+section, header{
+    margin: 0 auto;
+    width: 90%
+}
+
+.hero{
+    text-align: center;
+    height: 500px;
+}
+
+.content-box{
+    text-align: center;
+    /* justify-content: center; */
+}
+
+.left-align{
+    text-align: left;
+}
+
+.
+
+/* form */
+
+.registration{
+    /* width: 40%; */
+    /* -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;   */
+    margin: 0 20px;
+}
+
+.personal-info{
+    box-sizing: border-box;
+}
+
+.textbox {
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    width: 100%
+
+
+
 }
