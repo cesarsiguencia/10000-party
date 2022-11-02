@@ -1,10 +1,11 @@
 :root {
-    --primary-color: green;
+    --primary-color: white;
     --secondary-color: ;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;    
     box-sizing: border-box;      
-    box-sizing: border-box
+    box-sizing: border-box;
+    background-color: #8B4513;
 }
 
 * {
@@ -13,7 +14,21 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;    
     box-sizing: border-box;      
-    box-sizing: border-box
+    box-sizing: border-box;
+    
+}
+
+.body{
+   background-color: #8B4513;; 
+}
+
+p {
+    color: white
+}
+
+h1{
+    text-align: center;
+    color: var(--primary-color)
 }
 
 h2{
@@ -26,6 +41,14 @@ section, header{
     width: 90%
 }
 
+
+
+
+
+
+
+
+
 .hero{
     /* width: "100%" */
     position: relative;
@@ -35,16 +58,40 @@ section, header{
 .hero-menu{
     text-align: center;
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     width: 100%;
     margin: 0 auto;
 
 
 }
 
-/* .empire {
-    height: 500px
-} */
+
+.welcome-nav{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px auto;
+
+}
+
+
+.welcome-nav-links{
+    width:20%;
+    margin: auto;
+    padding: 25px;
+    border: 2px solid #FFC133;
+    border-radius: 30px; 
+}
+
+.welcome-nav-links:hover{
+    background-color: #FFC133;
+    transition: 500ms ease-in-out
+}
+
+.welcome-nav-links-font{
+    font-size: 20px;
+    display: inline;
+}
+
 
 .content-box{
     text-align: center;
@@ -93,4 +140,11 @@ header{
 
 
 
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 95%
 }
