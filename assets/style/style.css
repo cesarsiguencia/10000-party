@@ -16,19 +16,35 @@
     box-sizing: border-box
 }
 
-h1{
-    color: var(--primary-color)
+h2{
+    color: var(--primary-color);
+    display: block
 }
 
 section, header{
-    margin: 0 auto;
+    margin: 50px auto;
     width: 90%
 }
 
 .hero{
-    text-align: center;
-    height: 500px;
+    /* width: "100%" */
+    position: relative;
+
 }
+
+.hero-menu{
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    margin: 0 auto;
+
+
+}
+
+/* .empire {
+    height: 500px
+} */
 
 .content-box{
     text-align: center;
@@ -39,7 +55,21 @@ section, header{
     text-align: left;
 }
 
-.
+header{
+    justify-content: center;
+}
+
+.headings{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
 
 /* form */
 
