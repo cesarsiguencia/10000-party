@@ -48,21 +48,66 @@ section, header{
 
 
 
-
 .hero{
     /* width: "100%" */
     position: relative;
 
 }
 
-.hero-menu{
-    text-align: center;
+
+
+.welcome-title{
+    display: inline;
+
+
+
+}
+
+/* @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+} */
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+  
+    .welcome-box{  
+    /* This section calls the slideInFromLeft animation we defined above */
     position: absolute;
-    bottom: 25px;
+    text-align: center;
+    width: 100%;
+    top: 0px;    
+    height: 100%;
+    padding: 25%;
+    visibility: hidden;
+}
+
+.hero-menu{
+    visibility: hidden;
+    position: absolute;
+    bottom: 100px;
     width: 100%;
     margin: 0 auto;
+    text-align: center;
 
 
+}
+
+.hero-menu-animation{
+    visibility: visible;
+    animation: fadeInAnimation ease-in 750ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 
@@ -75,7 +120,7 @@ section, header{
 
 
 .welcome-nav-links{
-    width:20%;
+    width: 25%;
     margin: auto;
     padding: 25px;
     border: 2px solid #FFC133;
@@ -83,14 +128,17 @@ section, header{
 }
 
 .welcome-nav-links:hover{
-    background-color: #FFC133;
+    background-color: #FF9033;
     transition: 500ms ease-in-out
 }
 
 .welcome-nav-links-font{
-    font-size: 20px;
+    font-size: 25px;
     display: inline;
 }
+
+
+
 
 
 .content-box{
@@ -147,4 +195,13 @@ header{
     justify-content: space-between;
     margin: 20px auto;
     width: 95%
+}
+
+/* fonts */
+.copperplate {
+    font-family: copperplate
+}
+
+.berkshire {
+    font-family: 'Rock Salt', cursive
 }
