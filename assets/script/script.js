@@ -23,9 +23,9 @@ function changeWords(){
     }
 
     createItem = document.createElement("div");
-    createItem.className = 'carousel-item';
+    // createItem.className = 'carousel-item';
     createItem.className = 'welcome-box-animation'
-    createItem.innerHTML = "<h1>" + words[i] + "</h1>"
+    createItem.innerHTML = "<p class='welcome-title'>" + words[i] + "</p>"
 
 
     welcomeBox.appendChild(createItem)
