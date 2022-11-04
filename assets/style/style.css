@@ -18,6 +18,12 @@
     
 }
 
+a { 
+    color: white; 
+    text-decoration: none;
+}
+
+
 .body{
    background-color: #8B4513;; 
 }
@@ -64,7 +70,7 @@ section, header{
     top: 0px;
     width: 100%;
     /* height: 100%; */
-    padding: 25%;
+    padding: 30%;
     text-align: center;
     margin: auto 0 
     
@@ -76,6 +82,8 @@ section, header{
 .welcome-title{
     display: inline;
     font-size: 60px;
+    font-family: 'Amaranth', sans-serif;
+    /* font-family: 'Monoton', cursive; */
     
 }
 
@@ -96,7 +104,7 @@ section, header{
 .hero-menu{
     visibility: hidden;
     position: absolute;
-    bottom: 300px;
+    bottom: 250px;
     width: 100%;
     /* margin: 0 auto; */
     text-align: center;
