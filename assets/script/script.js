@@ -2,7 +2,7 @@ var welcomeBox = document.querySelector(".welcome-box")
 var welcomeMenu = document.querySelector(".hero-menu")
 
 setTimeout(() => {
-    welcomeBox.classList.add("hero-menu-animation")
+    welcomeBox.classList.add("welcome-box-animation")
 }, 1000)
 
 setTimeout(() => {

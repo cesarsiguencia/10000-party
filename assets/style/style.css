@@ -63,14 +63,19 @@ section, header{
 
 }
 
-/* @keyframes slideInFromLeft {
+/* @keyframes slideInFromL {
     0% {
       transform: translateX(-100%);
     }
     100% {
       transform: translateX(0);
     }
-} */
+}  */
+
+@keyframes slide-down {
+    0% { opacity: 0; -webkit-transform: translateY(-100%); }   
+  100% { opacity: 1; -webkit-transform: translateY(0); }
+}
 
 @keyframes fadeInAnimation {
     0% {
@@ -99,15 +104,18 @@ section, header{
     width: 100%;
     margin: 0 auto;
     text-align: center;
-
-
 }
 
-.hero-menu-animation{
+.welcome-box-animation{
     visibility: visible;
     animation: fadeInAnimation ease-in 750ms;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+.hero-menu-animation {
+    visibility: visible;
+    animation: slide-down .3s ease-out;
 }
 
 
