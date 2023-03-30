@@ -176,7 +176,13 @@ section, header{
 }
 
 
-
+.main-nav-links{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    width: 20%;
+    text-align: center;
+}
 
 
 .content-box{
@@ -204,6 +210,7 @@ header{
 
 
 
+
 /* form */
 
 .registration{
@@ -226,6 +233,11 @@ header{
 
 
 
+}
+
+.highlighted-options {
+    background-color :#FF9033;
+    border-radius: 30px;
 }
 
 .footer{
