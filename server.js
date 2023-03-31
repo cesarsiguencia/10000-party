@@ -1,6 +1,6 @@
 const express = require('express')
 
-const sequelize = require ('sequelize')
+const sequelize = require ('./controller/config')
 
 const app = express()
 
