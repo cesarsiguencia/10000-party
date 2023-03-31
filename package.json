@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mysql2": "^3.2.0",
     "sequelize": "^6.30.0"
@@ -11,7 +12,6 @@
   "description": "A website all about my special event I'm hosting for when I turn 10,000 days old. All information regarding the festivity is available here",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cesarsiguencia/10000-days.git"
