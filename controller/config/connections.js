@@ -1,7 +1,11 @@
 const Sequelize = require('sequelize')
 
-const sequelizeConnect = new Sequelize(
-    process.env.mysql_name, 
+require('dotenv').config()
+
+let sequelize;
+
+sequelize = new Sequelize(
+    process.env.mysql_database_name, 
     process.env.mysql_user, 
     process.env.mysql_password, 
     {
@@ -11,4 +15,4 @@ const sequelizeConnect = new Sequelize(
     }
 )
 
-module.exports = sequelizeConnect
+module.exports = sequelize

@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize')
-const sequelizeConnect = require('../controller/config')
+const sequelize = require('../controller/config/connections')
 
 class Comment extends Model { }
 
@@ -14,8 +14,10 @@ Comment.init(
         comment_text: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [1]
+            validate: { 
+                notEmpty: {
+                    msg: 'Cannot leave blank!'
+                }
             }
         },
         user_id: {
@@ -36,7 +38,7 @@ Comment.init(
         }
     },
     {
-        sequelizeConnect,
+        sequelize,
         freezeTableName: true,
         underscored: true,
         modelName: 'comment'

@@ -6,7 +6,8 @@
     "sequelize": "^6.30.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "seeds": "node controller/database/seeds/index.js"
   },
   "name": "10000-days",
   "description": "A website all about my special event I'm hosting for when I turn 10,000 days old. All information regarding the festivity is available here",

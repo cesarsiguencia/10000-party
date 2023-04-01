@@ -1,6 +1,6 @@
 const express = require('express')
 
-const sequelize = require ('./controller/config')
+const sequelize = require ('./controller/config/connections')
 
 const app = express()
 
@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
     res.json('working file')
 })
 
-// sequelize.sync({ force: true }).then(() => {
-//     app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
-// })
+sequelize.sync({ force: false}).then(() => {
+    app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
+})
 
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
+// app.listen(PORT, () => console.log(`Listening on port ${PORT}`))

@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize')
-const sequelizeConnect = require('../controller/config')
+const sequelize = require('../controller/config/connections')
 
 class Post extends Model { }
 
@@ -21,7 +21,7 @@ Post.init(
             }
         },
         post_link: {
-            id: DataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: true,
             validate: {
                 isUrl: true
@@ -37,7 +37,7 @@ Post.init(
         }
     },
     {
-        sequelizeConnect,
+        sequelize,
         freezeTableName: true,
         underscored: true,
         modelName: 'post'
