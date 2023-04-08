@@ -218,6 +218,65 @@ section > p, label{
 
 
 
+.venue-imgs{
+    display: flex;
+    margin: 30px auto;
+}
+
+.skylark-imgs{
+    display: block;
+    background-image: url('../media/lounge.png');
+    background-size: cover;
+    background-position-x: 50%;
+    width: 400px;  
+    height: 400px;
+    margin: 0 auto
+
+}
+
+.skylark-imgs-2{
+    display: block;
+    background-image: url('../media/lounge-2.png');
+    background-size: cover;
+    background-position-x: 30%;
+    width: 400px;  
+    height: 400px;
+    margin: 0 auto
+
+}
+
+
+.skylark-imgs-3{
+    display: block;
+    background-image: url('../media/lounge-3.png');
+    background-size: cover;
+    background-position-x: 30%;
+    width: 400px;  
+    height: 400px;
+    margin: 0 auto
+
+}
+
+.venue-info{
+    display: flex;
+    margin: 30px auto;
+}
+
+.venue-sections{
+    width: 45%;
+    margin: 0 auto;
+    font-family:'monospace', monaco
+}
+
+iframe { 
+    display: block; 
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
 .registration{
     /* width: 40%; */
     /* -webkit-box-sizing: border-box;
