@@ -48,6 +48,10 @@ section, header{
     width: 90%
 }
 
+section{
+    width: 80%
+}
+
 
 .hero{
     background-image: url('../media/empire.png');
@@ -55,6 +59,17 @@ section, header{
     background-size: cover;
     width: 100%;
     height: 100vh;
+
+}
+
+.hero-2{
+    position: relative;
+    background-image: url('../media/empire.png');
+    /* overflow: hidden; */
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    width: 100%;
 
 }
 
@@ -76,7 +91,7 @@ section, header{
     -webkit-text-stroke-color: black;
     font-family: 'Amaranth', sans-serif;
 
-    /* font-family: 'Monoton', cursive; */
+    
     
 }
 
@@ -95,9 +110,8 @@ section, header{
 }
 
 .hero-menu{
-    visibility: hidden;
     position: absolute;
-    bottom: 250px;
+    bottom: 50px;
     width: 100%;
     text-align: center;
 }
@@ -150,6 +164,7 @@ section, header{
     text-decoration: none;
     width: 20%;
     text-align: center;
+    font-family: copperplate
 }
 
 
@@ -169,14 +184,32 @@ header{
 .headings{
     display: flex;
     justify-content: space-between;
+    font-family:'Amaranth', sans-serif;
+    font-size: 25px;
 }
 
 .header-nav{
     display: flex;
     justify-content: space-evenly;
+    margin: 20px auto;
 }
 
 
+
+h3{
+    font-family: copperplate;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+
+section > p{
+    font-family: 'monospace', monaco;   
+}
+
+.left-align > p{
+    font-family:'monospace', monaco
+}
 
 
 /* form */
@@ -186,7 +219,13 @@ header{
     /* -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;    
     box-sizing: border-box;   */
-    margin: 0 20px;
+    margin: 20px 20px;
+}
+
+.personal-info > label {
+    font-family: copperplate;
+    font-size: 25px;
+    color: white
 }
 
 .personal-info{
@@ -236,6 +275,14 @@ header{
     .carousel{
         padding-top: 400px;;
     }
+
+}
+
+@media screen and (max-width: 1000px){
+    .hero-2{
+        height: 500px;
+    }
+
 
 }
 
