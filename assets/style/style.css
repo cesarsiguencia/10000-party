@@ -25,8 +25,7 @@ a {
 
 
 .body{
-   background-color: #8B4513;; 
-   height: 100vh;
+   background-color: rgba(40,40,40);
 }
 
 p {
@@ -49,10 +48,11 @@ section, header{
 }
 
 section{
-    width: 80%
+    width: 80%;
+    
 }
 
-
+/* Intro Page */
 .hero{
     background-image: url('../media/empire.png');
     /* overflow: hidden; */
@@ -156,7 +156,7 @@ section{
     font-size: 25px;
     display: inline;
 }
-
+/* End */
 
 .main-nav-links{
     color: white;
@@ -207,12 +207,16 @@ section > p{
     font-family: 'monospace', monaco;   
 }
 
+section > p, label{
+    font-family: 'monospace', monaco;   
+}
+
 .left-align > p{
     font-family:'monospace', monaco
 }
 
 
-/* form */
+
 
 .registration{
     /* width: 40%; */
@@ -266,6 +270,42 @@ section > p{
 .berkshire {
     font-family: 'Rock Salt', cursive
 }
+
+/* form page*/
+
+label,input{
+    display: block;
+    margin-top: 10px;
+    width: 25%
+}
+
+form > p{
+    font-family: copperplate
+}
+
+.attendance{
+    width: 25%
+}
+
+.attendance > label,input{
+    display: inline;
+
+}
+
+.form-components{
+    font-family:'monospace', monaco;
+    margin-top: 10px;
+}
+
+label {
+    color:white
+}
+
+button{
+    background-color: rgba(0,0,0,0);
+}
+
+
 
 @media screen and (max-width: 1600px){
     .hero{
