@@ -6,9 +6,9 @@ var welcomeMenu = document.querySelector(".hero-menu")
 //     welcomeBox.classList.add("welcome-box-animation")
 // }, 1000)
 
-setTimeout(() => {
-    welcomeMenu.classList.add("hero-menu-animation")
-}, 8000)
+// setTimeout(() => {
+//     welcomeMenu.classList.add("hero-menu-animation")
+// }, 8000)
 
 
 
@@ -28,7 +28,10 @@ function changeWords(){
     createItem.innerHTML = "<p class='welcome-title'>" + words[i] + "</p>"
 
 
+
+
     welcomeBox.appendChild(createItem)
+    
     carouselItem = createItem
 
     if(i < words.length-1){
@@ -41,4 +44,16 @@ function changeWords(){
     
 }
 
+function insertHomeBtn(){
+
+    var buttonItem = document.createElement("a")
+    buttonItem.className = 'welcome-nav-links'
+    buttonItem.setAttribute("href", "/home")
+    buttonItem.innerHTML = '<p class="welcome-nav-links-font copperplate">Click here for awesomeness</p> '
+
+    welcomeBox.appendChild(buttonItem)
+}
+
 window.onload=changeWords
+
+setTimeout("insertHomeBtn()", 12000)
