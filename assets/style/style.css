@@ -11,77 +11,123 @@
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;    
-    box-sizing: border-box;      
-    box-sizing: border-box;
+
     
 }
+
+/* Global */
+section, header{
+  margin: 50px auto;
+  width: 90%
+}
+
+section{
+  width: 80%;
+  
+}
+
+p {
+  color: white
+}
+
+h1{
+  text-align: center;
+  color: var(--primary-color)
+}
+
+h2{
+  color: var(--primary-color);
+  display: block
+}
+
+html,body{
+  height: 100%;
+  background-color: rgba(40,40,40);
+}
+
+/* Intro Page */
 
 a { 
     color: white; 
     text-decoration: none;
 }
 
-
-.body{
-   background-color: rgba(40,40,40);
-}
-
-p {
-    color: white
-}
-
-h1{
-    text-align: center;
-    color: var(--primary-color)
-}
-
-h2{
-    color: var(--primary-color);
-    display: block
-}
-
-section, header{
-    margin: 50px auto;
-    width: 90%
-}
-
-section{
-    width: 80%;
-    
-}
-
-/* Intro Page */
 .hero{
-    background-image: url('../media/empire.png');
-    /* overflow: hidden; */
-    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    background-image: url('../media/empire.png');
+      background-size: 100%;
+  background-position: center;
+  
+  transition: 1.5s;
 
 }
+
+.intro-box {
+}
+
+@keyframes slide-down {
+  0% { opacity: 0; -webkit-transform: translateY(-100%); }   
+100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+.intro-box-words{
+  visibility: visible;
+  animation: fadeInAnimation ease-in 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.welcome-button{
+  display: block;
+  margin: 25px auto;
+  padding: 25px 25px;
+  border: 2px solid #FFC133;
+  border-radius: 30px; 
+  width: 75%;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  transition: 1.5s
+}
+
+.welcome-button:hover{
+  background-color: #FF9033;
+  transition: 500ms ease-in-out
+}
+
+.welcome-button-font{
+  font-size: 25px;
+  display: inline;
+}
+
+
+/* homepage */
 
 .hero-2{
-    position: relative;
-    background-image: url('../media/empire.png');
-    /* overflow: hidden; */
-    background-size: cover;
-    background-position: center;
-    height: 800px;
-    width: 100%;
+  position: relative;
+  background-image: url('../media/empire.png');
+  /* overflow: hidden; */
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  width: 100%;
 
 }
 
-
-.carousel {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    padding-top: 30%;
-    text-align: center;
-    margin: auto 0 
-}
  
 
 .welcome-title{
@@ -90,72 +136,9 @@ section{
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
     font-family: 'Amaranth', sans-serif;
-
-    
-    
-}
-
-@keyframes slide-down {
-    0% { opacity: 0; -webkit-transform: translateY(-100%); }   
-  100% { opacity: 1; -webkit-transform: translateY(0); }
-}
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-}
-
-.hero-menu{
-    position: absolute;
-    bottom: 50px;
-    width: 100%;
-    text-align: center;
-}
-
-.welcome-box-animation{
-    visibility: visible;
-    animation: fadeInAnimation ease-in 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-.hero-menu-animation {
-    visibility: visible;
-    animation: slide-down .3s ease-out;
 }
 
 
-.welcome-nav{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 30px auto;
-
-}
-
-
-.welcome-nav-links{
-    display: block;
-    margin: 25px auto;
-    padding: 25px 25px;
-    border: 2px solid #FFC133;
-    border-radius: 30px; 
-    width: 75%;
-    backdrop-filter: blur(5px);
-}
-
-.welcome-nav-links:hover{
-    background-color: #FF9033;
-    transition: 500ms ease-in-out
-}
-
-.welcome-nav-links-font{
-    font-size: 25px;
-    display: inline;
-}
 /* End */
 
 .main-nav-links{
@@ -168,10 +151,7 @@ section{
 }
 
 
-.content-box{
-    text-align: center;
-    /* justify-content: center; */
-}
+
 
 .left-align{
     text-align: left;
@@ -214,7 +194,7 @@ section > p, label{
 }
 
 .left-align > p{
-    font-family:'monospace', monaco
+    font-family:'monospace', monaco;
     font-family: "Euclid Circular A", "Poppins";
 }
 
@@ -279,6 +259,10 @@ iframe {
 }
 
 
+.content-box{
+  text-align: center;
+  /* justify-content: center; */
+}
 
 .registration{
     /* width: 40%; */
@@ -373,10 +357,10 @@ button{
     .hero{
         background-position: center;
     }
-
+/* 
     .carousel{
         padding-top: 400px;;
-    }
+    } */
 
 }
 
@@ -397,10 +381,10 @@ button{
     .footer > div{
         text-align: center;
     }
-    .welcome-box-animation{
+    /* .intro-box-words{
         margin: 0 auto;
         width: 90%
-    }
+    } */
 
 }
 
@@ -408,22 +392,22 @@ button{
  
  @media screen and (max-width: 575px){
 
-    .carousel{
+    /* .carousel{
         padding-top: 300px;;
-    }
+    } */
 
 }
 
 @media screen and (max-height: 650px){
-    .carousel{
+    /* .carousel{
         padding-top: 200px;;
-    }
+    } */
 
 }
 
 @media screen and (max-height: 550px){
-    .carousel{
+    /* .carousel{
         padding-top: 100px;;
-    }
+    } */
 
 }
