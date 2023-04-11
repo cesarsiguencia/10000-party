@@ -205,14 +205,17 @@ h3{
 
 section > p{
     font-family: 'monospace', monaco;   
+    font-family: "Euclid Circular A", "Poppins";
 }
 
 section > p, label{
     font-family: 'monospace', monaco;   
+    font-family: "Euclid Circular A", "Poppins";
 }
 
 .left-align > p{
     font-family:'monospace', monaco
+    font-family: "Euclid Circular A", "Poppins";
 }
 
 
