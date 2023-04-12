@@ -47,17 +47,18 @@ function introParallax(event){
     const scrollPosition = event.target.scrollingElement.scrollTop;
     console.log(scrollPosition)
     if (scrollPosition > 20) {
-        hero.style.backgroundSize = "100%";
+        hero.style.height = "100vh";
     } else {
-        hero.style.backgroundSize = "120%";
+        hero.style.height = "120vh";
     }
     
     
-}
+} 
 
-function loadParallax(){
+function loadParallax(event){
     const hero = document.querySelector(".hero")
-    hero.style.backgroundSize = "120%";
+    hero.style.height = "120vh";
+    event.target.scrollingElement.scrollTop = 0
 
 }
 
