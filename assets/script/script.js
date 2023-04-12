@@ -2,6 +2,7 @@ var welcomeBox = document.querySelector(".intro-box")
 var carouselBox = document.querySelector("#carousel-words")
 var wordBox = ''
 var i = 0
+var navBar = document.querySelector("#nav")
 
 
 function changeWords(){
@@ -73,6 +74,11 @@ function homeParallax(event){
     }
 }
 
+function navBarSelected(event){
+    var selectedBtn = event.target
+    console.log(selectedBtn)
+}
+
 function venueImgsParallax(event){
     const skylark1 = document.querySelector(".skylark-imgs")
     const skylark2 = document.querySelector(".skylark-imgs-2")
@@ -97,4 +103,5 @@ setTimeout("changeWords()", 1000)
 setTimeout("insertHomeBtn()", 1000)
 setTimeout("appearButton()", 12000)
 document.addEventListener("scroll", homeParallax)
+document.addEventListener("mouseover", navBarSelected())
 document.addEventListener("scroll", venueImgsParallax)
