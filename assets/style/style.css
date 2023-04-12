@@ -31,9 +31,11 @@ section:nth-child(even){
   background-color: var(--secondary-color)
 }
 
-/* section, header{
-  margin: 50px auto;
-} */
+
+iframe{
+    display: block;
+    margin: 0 auto;
+}
 
 header{
   justify-content: center;
@@ -64,7 +66,8 @@ h1{
 
 h2{
   color: var(--primary-color);
-  display: block
+  display: block;
+  font-family: 'Amaranth', sans-serif;
 }
 
 
@@ -157,6 +160,7 @@ a {
 }
 
 
+
 /* End */
 
 .main-nav-links{
@@ -190,6 +194,9 @@ a {
     margin: 20px auto;
 }
 
+.video{
+    margin: 0 auto
+}
 
 .venue-imgs{
     display: flex;
@@ -247,7 +254,7 @@ a {
     margin: 0 auto;
 }
 
-iframe { 
+.venue-sections > iframe { 
     display: block; 
     height: 400px;
     width: 100%;
