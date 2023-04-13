@@ -1,9 +1,14 @@
-<div>
-    <br/>
-    <p>{{post_text}}</p>
 
-    <a href={{post_link}} target="_blank"><p>Click Link!</p></a>
-
-    <p>{{user.username}}</p>
     <br/>
-</div>
+    <p class="post-text">"{{post_text}}"</p>  
+    
+    {{#if post_link}}
+    <a href={{post_link}} target="_blank"><p style="text-align:center" >Click Link!</p></a>
+    {{/if}}
+
+    <p class="post-user">- Says {{user.username}}</p>
+
+
+  
+    <br/>
+

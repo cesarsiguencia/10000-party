@@ -217,6 +217,37 @@ iframe{
 
 }
 
+.dashboard{
+
+    font-size: 25px;
+    color: white;
+    width: 40%;
+    margin: 10px auto;
+    background-color: var(--third-color);
+    border-radius: 25px;
+}
+
+
+
+.post-text{
+    font-style: italic;
+}
+
+.post-user{
+    font-family: 'Amaranth', sans-serif;
+}
+
+
+.copperplate{
+    font-family: copperplate;
+    text-align: center;
+}
+
+.dashboard-button{
+    padding: 10px;
+    border-radius: 25px;
+}
+
 
 /* Skylark Section Venue */
 
