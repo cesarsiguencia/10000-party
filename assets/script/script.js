@@ -2,7 +2,10 @@ var welcomeBox = document.querySelector(".intro-box")
 var carouselBox = document.querySelector("#carousel-words")
 var wordBox = ''
 var i = 0
+var header = document.querySelector("#mobileMenu")
 var navBar = document.querySelector("#nav")
+var navBarLinks = document.querySelectorAll(".nav-links")
+var clicked = 1
 
 
 function changeWords(){
@@ -92,6 +95,34 @@ function venueImgsParallax(event){
     }
 }
 
+function hamburgerMenu(){
+    const btn = document.getElementById("mobile-menu")
+    btn.classList.toggle("active")
+    navBar.classList.toggle("mobile-effect")
+    shrinkMenu()
+}
+
+function shrinkMenu(){
+
+    if(clicked == 1){
+        navBarLinks.forEach((link) => {
+            link.style.height = "50px"
+            link.style.opacity = 1
+        })
+        clicked = 0
+        return
+    } 
+
+    if(clicked == 0){
+        navBarLinks.forEach((link) => {
+            link.style.height = "0px"
+            link.style.opacity = 0
+        })
+        clicked = 1
+        return
+    } 
+
+}
 
 
 document.addEventListener("scroll", introParallax);
@@ -101,3 +132,6 @@ setTimeout("insertHomeBtn()", 1000)
 setTimeout("appearButton()", 12000)
 document.addEventListener("scroll", homeParallax)
 document.addEventListener("scroll", venueImgsParallax)
+header.addEventListener("click", hamburgerMenu)
+
+
