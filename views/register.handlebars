@@ -1,0 +1,70 @@
+{{>navbar }}
+
+<div class="body">
+    <section>
+
+    <h3>Please fill out all the fields in this form!</h3>
+
+    <form>
+        <div class="form-compnents">
+            <label for="form-first-name">First Name</label>
+            <input type="text" placeholder="First Name" name="first-name" id="form-first-name"/>
+        </div>
+
+        <div class="form-components">
+            <label for="form-last-name">Last Name</label>
+            <input type="text" placeholder="Last Name" name="last-name" id="form-last-name"/>
+        </div>
+
+        <div class="form-components">
+            <label for="form-confirm-age">I am at least 21 years old and am aware I must bring a government issued ID to the venue on the day of the event.</label>
+            <input type="radio" name="age-consent" id="form-confirm-age"/>
+        </div>
+
+        <div class="form-components">
+            <label for="form-phone">Enter your cell phone number</label>
+            <input type="tel" placeholder="Phone Number" name="phone" id="form-phone"/>
+        </div>
+
+        <div class="form-components">
+            <p>Confirm attendance? ? 
+                <div class="attendance">
+                    <input type="radio" name="form-attend" id="attend-yes"/>
+            <label for="attend-yes"> Yes </label>
+
+            <input type="radio" name="form-attend" id="attend-no"/>
+            <label for="attend-no"> No </label>
+
+            <input type="radio" name="form-attend" id="attend-maybe"/>
+            <label for="attend-maybe"> Not Sure</label>
+                </div>
+
+
+
+        </p>
+
+        </div>
+        <br/>
+        <br/>
+        <p> Users will be able to change their attendance choice up to a week before the event. Afterwards, users will NOT be able to change their answer on this form. If a user decides they cannot attend after the registration deadline, they must call the venue place directly and may be charged a cancellation fee.</p>
+
+        <p> Guests that originally notated their attendance as 'Not Sure' will automatically be placed as will not attend. Any guests who RSVPs two weeks before the day of the event will be given a courtsey email reminding them of their selected attendance choice, therefore, giving all guests at that time an opportunity to make a last minute reservation change if they choose to do so before there are 7 days prior to the event.</p>
+        <br/>
+
+
+        <div class="form-components">
+            <label for="form-terms">I have read the terms above and understand I have the right to change my attendance answer up to 7 days before the event</label>
+            <input type="radio" name="agreement" id="form-terms"/>
+        </div>
+
+        <button type="submit">
+            <a class="main-nav-links highlighted-options">
+                Complete RSVP
+            <a>
+        </button>
+
+    </form>
+</section>
+
+</div>
+
