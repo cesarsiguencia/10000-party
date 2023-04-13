@@ -74,10 +74,7 @@ function homeParallax(event){
     }
 }
 
-function navBarSelected(event){
-    var selectedBtn = event.target
-    console.log(selectedBtn)
-}
+
 
 function venueImgsParallax(event){
     const skylark1 = document.querySelector(".skylark-imgs")
@@ -103,5 +100,4 @@ setTimeout("changeWords()", 1000)
 setTimeout("insertHomeBtn()", 1000)
 setTimeout("appearButton()", 12000)
 document.addEventListener("scroll", homeParallax)
-document.addEventListener("mouseover", navBarSelected())
 document.addEventListener("scroll", venueImgsParallax)

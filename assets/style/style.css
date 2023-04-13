@@ -13,11 +13,9 @@
 * {
     margin: 0;
     padding: 0;
-
-    
 }
 
-/* Global */
+/* Global-------------------------*/
 
 html,body{
   height: 100%;
@@ -29,12 +27,6 @@ section:nth-child(odd){
 
 section:nth-child(even){
   background-color: var(--secondary-color)
-}
-
-
-iframe{
-    display: block;
-    margin: 0 auto;
 }
 
 
@@ -50,10 +42,12 @@ p {
 }
 
 h3{
+    display: block;
   font-family: copperplate;
   font-size: 35px;
   color: white;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 h1{
@@ -68,8 +62,7 @@ h2{
 }
 
 
-
-/* Intro Page */
+/* INTRO PAGE--------------------------*/
 
 a { 
     color: white; 
@@ -108,6 +101,14 @@ a {
    }
 }
 
+.welcome-title{
+    display: inline;
+    font-size: 60px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    font-family: 'Amaranth', sans-serif;
+}
+
 .intro-box-words{
   visibility: visible;
   animation: fadeInAnimation ease-in 1.5s;
@@ -130,34 +131,17 @@ a {
 }
 
 .welcome-button:hover{
-  background-color: #FF9033;
+  background-color: #c7834b;
   transition: 500ms ease-in-out
 }
 
 .welcome-button-font{
   font-size: 25px;
   display: inline;
+  font-family: copperplate;
 }
 
-
-/* homepage */
-
-#hero-2{
-    transition: ease-in-out 1.5s
-}
-
-.welcome-title{
-    display: inline;
-    font-size: 60px;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: black;
-    font-family: 'Amaranth', sans-serif;
-}
-
-
-
-/* End */
-
+/* HOMEPAGE -------------------- */
 /* Header */
 
 nav{
@@ -192,36 +176,49 @@ nav{
 
 .nav-links-selected:hover{
     opacity: 1;
-
     border-bottom: 3px solid var(--primary-color);
-
 }
 
 
+/* Introduction & Hero */
 
+#hero-2{
+    text-align: center;
+    transition: ease-in-out 1.5s
+}
 
-
-
-
-.left-align{
-    text-align: left;
+.hero-titles{
+    display: inline;
+    font-size: 60px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    font-family: 'Amaranth', sans-serif;
 }
 
 
-
-.headings{
-    display: flex;
-    justify-content: space-between;
+.intro-title{
     font-family:'Amaranth', sans-serif;
-    font-size: 25px;
+    font-size: 40px
 }
 
-
+.titles{
+    text-align: center;
+}
 
 
 .video{
-    margin: 0 auto
+    display: block;
+    margin: 0 auto;
+    width: 800px;
+    height: 500px;
 }
+
+iframe{
+
+}
+
+
+/* Skylark Section Venue */
 
 .venue-imgs{
     display: flex;
@@ -274,33 +271,25 @@ nav{
     margin: 30px auto;
 }
 
-.venue-sections{
+.venue-info-blocks{
     width: 45%;
     margin: 0 auto;
 }
 
-.venue-sections > iframe { 
+.venue-info-blocks > iframe { 
     display: block; 
     height: 400px;
     width: 100%;
     margin: 0 auto;
 }
 
-
-.content-box{
-  text-align: center;
-  /* justify-content: center; */
-}
+/* Section Sign Up */
 
 .registration{
-    /* width: 40%; */
-    /* -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;    
-    box-sizing: border-box;   */
-    margin: 20px 20px;
+    margin: 0 auto
 }
 
-.personal-info > label {
+.form-info > label {
     font-family: copperplate;
     font-size: 25px;
     color: white
@@ -315,12 +304,9 @@ nav{
     margin: 10px auto;
     display: block;
     width: 100%
-
-
-
 }
 
-
+/* Footer */
 
 .footer{
     display: flex;
@@ -330,21 +316,12 @@ nav{
     background-color: rgba(0,0,0,0);
 }
 
-
 .footer p{
     font-family: copperplate;
 }
 
-/* fonts */
-.copperplate {
-    font-family: copperplate
-}
-
-.berkshire {
-    font-family: 'Rock Salt', cursive
-}
-
-/* form page*/
+/* FORM PAGE --------------------------*/
+/* Fill Out Form */
 
 label,input{
     display: block;
@@ -378,27 +355,79 @@ button{
     background-color: rgba(0,0,0,0);
 }
 
-
+/* Media Queries ------------------------- */
 
 @media screen and (max-width: 1600px){
-    /* .hero{
-        background-position: center;
-    } */
-/* 
-    .carousel{
-        padding-top: 400px;;
-    } */
+    .venue-split{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .venue-imgs{
+        display: block;
+        width: 50%
+    }
+
+    .venue-imgs > *{
+        display: block;
+    }
+
+    .venue-info{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .venue-info-blocks{
+        width: 80%
+    }
+
+    .venue-info-blocks > iframe { 
+        display: block; 
+        height: 800px;
+        width: 100%;
+        margin: 0 auto;
+    }
 
 }
 
 @media screen and (max-width: 1000px){
-    .hero-2{
-        height: 500px;
+
+    .venue-split > * {
+        width: 100%;
     }
 
+    .venue-info-blocks > iframe { 
+        display: block; 
+        height: 400px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
 
+    .video{
+        width: 550px;
+        height: 350px;
+    }
 }
 
+
+@media screen and (max-width: 768px){
+
+    /* shortern nav */
+    .full-width{
+        width: 100%;
+        text-align: center;
+        padding: 0
+    }
+
+    .video{
+        width: 400px;
+        height: 300px;
+    }
+}
 
 @media screen and (max-width: 650px){
     .footer{
@@ -409,34 +438,52 @@ button{
         text-align: center;
     } 
 
+    .video{
+        width: 300px;
+        height: 200px;
 
-    /* .intro-box-words{
-        margin: 0 auto;
-        width: 90%
-    } */
+    }
 
+    section > div {
+        padding: 20px 0 20px 0
+    }
+
+    
 }
 
 
  
  @media screen and (max-width: 575px){
+    .skylark-imgs {
+        width: 250px;  
+        height: 250px;
+        margin-bottom: 20px;
+    }
 
-    /* .carousel{
-        padding-top: 300px;;
-    } */
+    .skylark-imgs-2 {
+        width: 250px;  
+        height: 250px;
+        margin-bottom: 20px;
+    }
 
+    .skylark-imgs-3 {
+        width: 250px;  
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .video{
+        width: 250px;
+        height: 150px;
+        display: inline;
+    }
+
+    .venue-info-blocks > iframe { 
+        height: 200px;
+    }
+
+    .textbox{
+        width: 80%;
+    }
 }
 
-@media screen and (max-height: 650px){
-    /* .carousel{
-        padding-top: 200px;;
-    } */
-
-}
-
-@media screen and (max-height: 550px){
-    /* .carousel{
-        padding-top: 100px;;
-    } */
-
-}
