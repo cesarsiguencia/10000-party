@@ -25,6 +25,19 @@
         <div class="full-width">
             <iframe class="video" src="https://drive.google.com/file/d/1dDOObMUn-SSuRPp826UlG1dgLZNsSkJW/preview" width="100%" allow="autoplay"></iframe>
         </div>
+
+
+        <div>
+            <div>
+                <p>Dashboard</p>
+                {{#each posts as |post|}}
+                    <div>
+                        {{> attendee-posts post}}
+                    </div>
+                {{/each}}
+
+            </div>
+        </div>
     </section>
 
 
