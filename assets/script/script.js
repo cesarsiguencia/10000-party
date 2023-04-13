@@ -2,10 +2,15 @@ var welcomeBox = document.querySelector(".intro-box")
 var carouselBox = document.querySelector("#carousel-words")
 var wordBox = ''
 var i = 0
+var x = 1
 var header = document.querySelector("#mobileMenu")
 var navBar = document.querySelector("#nav")
 var navBarLinks = document.querySelectorAll(".nav-links")
 var clicked = 1
+var posts = document.querySelectorAll('.dashboard-posts')
+var dashboard = document.querySelector('.dashboard-carousel')
+
+
 
 
 function changeWords(){
@@ -96,10 +101,13 @@ function venueImgsParallax(event){
 }
 
 function hamburgerMenu(){
-    const btn = document.getElementById("mobile-menu")
-    btn.classList.toggle("active")
-    navBar.classList.toggle("mobile-effect")
-    shrinkMenu()
+    if(document.body.clientWidth < 768){
+        const btn = document.getElementById("mobile-menu")
+        btn.classList.toggle("active")
+        navBar.classList.toggle("mobile-effect")
+        shrinkMenu()
+    }
+
 }
 
 function shrinkMenu(){
@@ -124,6 +132,44 @@ function shrinkMenu(){
 
 }
 
+function postsCarousel(){
+
+    if(x == 1){
+        console.log("first")
+        posts.forEach((post) => {
+            post.style.transform = "translate(-100%)"
+        })
+        x = 2
+        console.log(x)
+        return
+    }
+
+    if(x == 2){
+        console.log("second")
+        posts.forEach((post) => {
+            post.style.transform = "translate(-200%)"
+        })
+        x = 3
+        return
+    }
+
+    if(x == 3){
+        console.log("third")
+        posts.forEach((post) => {
+            post.style.transform = "translate(0%)"
+        })
+        x = 1
+        return
+    }
+
+
+
+
+    
+        
+
+}   
+
 
 document.addEventListener("scroll", introParallax);
 window.onload=loadParallax
@@ -133,5 +179,6 @@ setTimeout("appearButton()", 12000)
 document.addEventListener("scroll", homeParallax)
 document.addEventListener("scroll", venueImgsParallax)
 header.addEventListener("click", hamburgerMenu)
+setInterval(postsCarousel, 8000)
 
 

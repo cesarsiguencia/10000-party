@@ -29,14 +29,17 @@
 
         <div class="dashboard">
                 <p class="copperplate">Here Is What Attendees Are Already Saying!</p>
-            {{#each posts as |post|}}
-                <div class="dashboard-posts">
-                    {{> attendee-posts post}}
-                </div>
-            {{/each}}
-            <div class="dashboard-button highlighted-options ">
+                    <div class="dashboard-carousel">
+                        {{#each posts as |post|}}
+                            <div class="dashboard-posts">
+                                {{> attendee-posts post}}
+                     </div>
+                        {{/each}}
+                    </div>
+ 
+            <div class="dashboard-button highlighted-options nav-links-selected ">
                 <a href="/register">
-                <p class="copperplate nav-links-selected">
+                <p class="copperplate">
                     Join the conversation by registering today!
                 </p>
                 </a>

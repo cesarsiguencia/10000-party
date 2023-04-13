@@ -2,7 +2,6 @@ const router = require('express').Router()
 
 const { Post , User } = require('../../../models')
 
-
 router.get('/', (req,res) => {
     Post.findAll({
         include: [
@@ -21,6 +20,9 @@ router.get('/', (req,res) => {
                 // loggedIn: req.session.loggedIn
             })
         })
+            
+            
+            
         .catch(err => {
             res.status(500).json(err)
         })
