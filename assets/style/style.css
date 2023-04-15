@@ -3,11 +3,14 @@
     --secondary-color: #8B4513;
     --third-color: rgba(40,40,40);
     --fourth-color: #FF9033;
+    --linear: linear-gradient(#8B4513, #b86d38);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;    
     box-sizing: border-box;      
-    box-sizing: border-box;
-    background-color: #8B4513;
+    background-color: var(--secondary-color);
+    background-image: var(--linear);
+    
+    
 }
 
 *{
@@ -19,6 +22,9 @@
 
 html,body{
   height: 100%;
+  margin: 0;
+  padding: 0;
+
 }
 
 section:nth-child(odd){
@@ -26,7 +32,8 @@ section:nth-child(odd){
 }
 
 section:nth-child(even){
-  background-color: var(--secondary-color)
+  background-color: var(--secondary-color);
+  background-image: var(--linear)
 }
 
 
@@ -149,6 +156,8 @@ nav{
     flex-direction: row;
     justify-content: space-evenly;
     margin: auto;
+    background-color: var(--secondary-color);
+    background-image: var(--linear);
 }
 
 .nav-links{
@@ -308,15 +317,22 @@ iframe{
 
 /* Footer */
 
-.footer{
+footer{
+    height: fit-content;
+    background-color: var(--secondary-color);
+    background-image: var(--linear);
+}
+
+.footer-flex{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 20px 20px 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 20px 20px 20px;
-    background-color: rgba(0,0,0,0);
 }
 
-.footer p{
+footer p{
     font-family: copperplate;
 }
 
@@ -482,11 +498,11 @@ button{
 }
 
 @media screen and (max-width: 650px){
-    .footer{
+    .footer-flex{
         display: block;
     }
 
-    .footer > div{
+    .footer-flex > div{
         text-align: center;
     } 
 
