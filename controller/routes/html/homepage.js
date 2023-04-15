@@ -1,16 +1,33 @@
 const router = require('express').Router()
 
+const { Post , User } = require('../../../models')
 
 router.get('/', (req,res) => {
-    // User.findAll({
-    //     attributes: {exclude: ['password']}
-    // })
-    //     .then(usersFromDb => res.json(usersFromDb))
-    //     .catch(err => {
-    //         res.status(500).json(err)
-    //     })
+    Post.findAll({
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+        .then(postsFromDb => {
+            const posts = postsFromDb.map(post => post.get({
+                plain:true
+            }));
+            res.render('homepage', {
+                posts
+                // loggedIn: req.session.loggedIn
+            })
+        })
+            
+            
+            
+        .catch(err => {
+            res.status(500).json(err)
+        })
 
-    res.render('homepage')
+    
     
 });
 

@@ -226,6 +226,59 @@ iframe{
 
 }
 
+.dashboard{
+
+    font-size: 25px;
+    color: white;
+    width: 40%;
+    margin: 10px auto;
+    background-color: var(--third-color);
+    border-radius: 25px;
+}
+
+.dashboard-carousel{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    /* overflow-x: scroll; */
+    
+    /* overscroll-behavior: auto; */
+    /* scroll-snap-type: x mandatory; */
+/*     scroll-snap-align: center; */
+}
+
+.dashboard-posts{
+
+    width: 100%;
+    /* overflow: hidden; */
+    flex-shrink: 0;
+    transition: ease-in-out 1s;
+    
+}
+
+.dashboard-posts-length{
+
+}
+
+.post-text{
+    font-style: italic;
+}
+
+.post-user{
+    font-family: 'Amaranth', sans-serif;
+}
+
+
+.copperplate{
+    font-family: copperplate;
+    text-align: center;
+}
+
+.dashboard-button{
+    padding: 10px;
+    border-radius: 25px;
+}
+
 
 /* Skylark Section Venue */
 
@@ -516,6 +569,18 @@ button{
         padding: 20px 0 20px 0
     }
 
+    .dashboard{
+        width: 75%;
+        padding: 15px;
+    }
+
+
+
+    .dashboard-button{
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 25px;
+    }
     
 }
 
