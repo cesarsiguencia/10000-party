@@ -52,7 +52,6 @@ function introParallax(event){
     const hero = document.querySelector(".hero")
     const scrollPosition = event.target.scrollingElement.scrollTop;
     
-    console.log(scrollPosition)
     if (scrollPosition > 20) {
         hero.style.height = "100vh";
     } else {
@@ -135,17 +134,14 @@ function shrinkMenu(){
 function postsCarousel(){
 
     if(x == 1){
-        console.log("first")
         posts.forEach((post) => {
             post.style.transform = "translate(-100%)"
         })
         x = 2
-        console.log(x)
         return
     }
 
     if(x == 2){
-        console.log("second")
         posts.forEach((post) => {
             post.style.transform = "translate(-200%)"
         })
@@ -154,7 +150,6 @@ function postsCarousel(){
     }
 
     if(x == 3){
-        console.log("third")
         posts.forEach((post) => {
             post.style.transform = "translate(0%)"
         })
