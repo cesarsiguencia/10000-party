@@ -9,6 +9,7 @@ var navBarLinks = document.querySelectorAll(".nav-links")
 var clicked = 1
 var posts = document.querySelectorAll('.dashboard-posts')
 var dashboard = document.querySelector('.dashboard-carousel')
+var barHeight = ""
 
 
 
@@ -161,11 +162,40 @@ function postsCarousel(){
 
 
 
-
     
         
 
 }   
+
+
+
+function smoothScroll(event){
+    barHeight = navBar.clientHeight;
+    
+
+   var section = event.target.id
+   console.log(section)
+    document.querySelector(`${section}`).scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+        
+    });
+
+    setTimeout(scrollAdjuster, 800)
+
+
+}
+
+function scrollAdjuster(){
+    
+    console.log(barHeight)
+    window.scrollBy({
+        behavior: 'smooth',
+        top: -`${barHeight + 20}`
+    })
+}
+
+
 
 
 document.addEventListener("scroll", introParallax);
@@ -178,4 +208,6 @@ document.addEventListener("scroll", venueImgsParallax)
 header.addEventListener("click", hamburgerMenu)
 setInterval(postsCarousel, 8000)
 
+
+navBar.addEventListener("click", smoothScroll)
 

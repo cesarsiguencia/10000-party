@@ -27,6 +27,7 @@ html,body{
 
 }
 
+
 section:nth-child(odd){
   background-color: var(--third-color)
 }
@@ -36,11 +37,15 @@ section:nth-child(even){
   background-image: var(--linear)
 }
 
+section{
+    padding: 20px 20px 20px 20px
+}
+
 
 section > div{
   width: 80%;
   margin: 0 auto;
-  padding: 20px 20px 20px 20px
+  
 }
 
 p {
@@ -203,10 +208,15 @@ nav{
     transition: ease-in-out 1.5s
 }
 
-#introduction{
-    padding: 20px 0 20px 0;
+.intro-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.intro-div > div{
+    padding: 20px 20px 20px 20px
+}
 
 
 .intro-title{
@@ -236,6 +246,7 @@ iframe{
     width: 40%;
     background-color: var(--third-color);
     border-radius: 25px;
+    margin: 0 auto
 }
 
 .dashboard-carousel{
