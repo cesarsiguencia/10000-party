@@ -10,24 +10,25 @@ var clicked = 1
 var posts = document.querySelectorAll('.dashboard-posts')
 var dashboard = document.querySelector('.dashboard-carousel')
 var barHeight = ""
+var selectedElement = ""
 
 
 
 
-function changeWords(){
+function changeWords() {
     var welcomeWords = ["You're Invited!", "On my 10,000th day of life", "Saturday, October 21st, 2023"]
 
-    if(welcomeTitleHolder){
+    if (welcomeTitleHolder) {
         welcomeTitleHolder.remove()
     }
     welcomeTitleHolder = document.createElement("div");
     welcomeTitleHolder.className = 'welcome-title-holder'
     welcomeTitleHolder.innerHTML = "<p class='welcome-titles'>" + welcomeWords[i] + "</p>"
 
-    
+
     welcomeCarousel.appendChild(welcomeTitleHolder)
 
-    if(i < welcomeWords.length-1){
+    if (i < welcomeWords.length - 1) {
         i++
     } else {
         return
@@ -36,33 +37,33 @@ function changeWords(){
     setTimeout("changeWords()", 4000)
 }
 
-function insertHomeBtn(){
+function insertHomeBtn() {
     var buttonItem = document.createElement("a")
     buttonItem.className = 'welcome-button'
     buttonItem.innerHTML = '<p class="welcome-button-font copperplate">Click here for awesomeness</p> '
     welcomeBox.appendChild(buttonItem)
 }
 
-function appearButton(){
+function appearButton() {
     var button = document.querySelector(".welcome-button")
     button.setAttribute("href", "/home")
     button.style.opacity = 1
 }
 
 
-function introParallax(event){
+function introParallax(event) {
     const hero = document.querySelector(".hero")
     const scrollPosition = event.target.scrollingElement.scrollTop;
-    
+
     if (scrollPosition > 20) {
         hero.style.height = "100vh";
     } else {
 
         hero.style.height = "120vh";
-    } 
-} 
+    }
+}
 
-function loadParallax(event){
+function loadParallax(event) {
     const scrollPosition = event.target.scrollingElement.scrollTop;
     const hero = document.querySelector(".hero")
     hero.style.height = "120vh";
@@ -70,10 +71,10 @@ function loadParallax(event){
 
 }
 
-function homeParallax(event){
+function homeParallax(event) {
     const hero2 = document.querySelector("#hero-2")
     const scrollPosition = event.target.scrollingElement.scrollTop;
-    if(scrollPosition > 350){
+    if (scrollPosition > 350) {
         hero2.style.opacity = 0;
         hero2.style.translate = "0 -50px";
         hero2.style.scale = "0.9";
@@ -86,12 +87,12 @@ function homeParallax(event){
 
 
 
-function venueImgsParallax(event){
+function venueImgsParallax(event) {
     const skylark1 = document.querySelector(".skylark-imgs")
     const skylark2 = document.querySelector(".skylark-imgs-2")
     const skylark3 = document.querySelector(".skylark-imgs-3")
     const scrollPosition = event.target.scrollingElement.scrollTop;
-    if(scrollPosition > 2000){
+    if (scrollPosition > 2000) {
         skylark1.style.backgroundSize = "230%"
         skylark2.style.backgroundSize = "200%"
         skylark3.style.backgroundSize = "200%"
@@ -102,41 +103,59 @@ function venueImgsParallax(event){
     }
 }
 
-function hamburgerMenu(){
-    if(document.body.clientWidth < 768){
+function hamburgerMenu() {
+    var screenWidth = document.body.clientWidth 
+    if (screenWidth <= 768) {
         const btn = document.getElementById("mobile-menu")
         btn.classList.toggle("active")
         navBar.classList.toggle("mobile-effect")
         shrinkMenu()
-    }
+    } 
+
+
 
 }
 
-function shrinkMenu(){
+function shrinkMenu() {
 
-    if(clicked == 1){
+    if (clicked == 1) {
         navBarLinks.forEach((link) => {
             link.style.height = "50px"
             link.style.opacity = 1
         })
         clicked = 0
         return
-    } 
+    }
 
-    if(clicked == 0){
+    if (clicked == 0) {
         navBarLinks.forEach((link) => {
             link.style.height = "0px"
             link.style.opacity = 0
         })
         clicked = 1
         return
-    } 
+    }
 
 }
 
-function postsCarousel(){
+function bringBarBack(){
+    var screenWidth = document.body.clientWidth
+    console.log(screenWidth)
+    if (screenWidth > 768){
+        navBarLinks.forEach((link) => {
+            link.removeAttribute("style")
+        })
+    }
+}
 
-    if(x == 1){
+
+
+
+
+
+function postsCarousel() {
+
+    if (x == 1) {
         posts.forEach((post) => {
             post.style.transform = "translate(-100%)"
         })
@@ -144,7 +163,7 @@ function postsCarousel(){
         return
     }
 
-    if(x == 2){
+    if (x == 2) {
         posts.forEach((post) => {
             post.style.transform = "translate(-200%)"
         })
@@ -152,7 +171,7 @@ function postsCarousel(){
         return
     }
 
-    if(x == 3){
+    if (x == 3) {
         posts.forEach((post) => {
             post.style.transform = "translate(0%)"
         })
@@ -162,44 +181,55 @@ function postsCarousel(){
 
 
 
-    
-        
-
-}   
 
 
 
-function smoothScroll(event){
+}
+
+
+
+function smoothScroll(event) {
     barHeight = navBar.clientHeight;
     
 
-   var section = event.target.id
-   console.log(section)
-    document.querySelector(`${section}`).scrollIntoView({
+
+    var section = event.target.id
+    console.log(section)
+    selectedElement = document.querySelector(`${section}`)
+    selectedElement.style.opacity = 0
+    selectedElement.scrollIntoView({
         block: 'start',
         behavior: 'smooth',
-        
+
     });
+
+
+
 
     setTimeout(scrollAdjuster, 800)
 
 
 }
 
-function scrollAdjuster(){
-    
+function scrollAdjuster() {
+
     console.log(barHeight)
     window.scrollBy({
         behavior: 'smooth',
         top: -`${barHeight + 20}`
     })
+    selectedElement.style.transition = "2s"
+    selectedElement.style.opacity = 1
+
+    
+
 }
 
 
 
 
 document.addEventListener("scroll", introParallax);
-window.onload=loadParallax
+window.onload = loadParallax
 setTimeout("changeWords()", 1000)
 setTimeout("insertHomeBtn()", 1000)
 setTimeout("appearButton()", 12000)
@@ -210,4 +240,5 @@ setInterval(postsCarousel, 8000)
 
 
 navBar.addEventListener("click", smoothScroll)
+window.addEventListener("resize", bringBarBack)
 

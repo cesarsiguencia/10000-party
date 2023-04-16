@@ -1,80 +1,81 @@
 :root {
     --primary-color: white;
     --secondary-color: #8B4513;
-    --third-color: rgba(40,40,40);
+    --third-color: rgba(40, 40, 40);
     --fourth-color: #FF9033;
     --linear: linear-gradient(#8B4513, #b86d38);
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;    
-    box-sizing: border-box;      
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     background-color: var(--secondary-color);
-    background-image: var(--linear);
-    
-    
+
+
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 /* Global-------------------------*/
 
-html,body{
-  height: 100%;
-  margin: 0;
-  padding: 0;
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
 
 }
 
 
-section:nth-child(odd){
-  background-color: var(--third-color)
+section:nth-child(odd) {
+    background-color: var(--third-color)
 }
 
-section:nth-child(even){
-  background-color: var(--secondary-color);
-  background-image: var(--linear)
+section:nth-child(even) {
+    background-color: var(--secondary-color);
+    background-image: var(--linear)
 }
 
-section{
+section {
     padding: 20px 20px 20px 20px
 }
 
 
-section > div{
-  width: 80%;
-  margin: 0 auto;
-  
+section>div {
+    width: 80%;
+    margin: 0 auto;
+
 }
 
 p {
-  color: white;
-  font-family: "Euclid Circular A", "Poppins";
+    color: white;
+    font-family: "Euclid Circular A", "Poppins";
 }
 
-h3{
+h3 {
     display: block;
-  font-family: copperplate;
-  font-size: 35px;
-  color: white;
-  text-align: center;
-  margin-bottom: 20px;
+    font-family: copperplate;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-h1{
-  text-align: center;
-  color: var(--primary-color)
+h1 {
+    text-align: center;
+    color: var(--primary-color)
 }
 
-h2{
-  color: var(--primary-color);
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
+h2 {
+    color: var(--primary-color);
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
     font-weight: 100;
 }
 
-h6{
+h6 {
     font-family: copperplate;
     text-align: center;
     font-size: 20px;
@@ -82,12 +83,12 @@ h6{
 
 /* INTRO PAGE--------------------------*/
 
-a { 
-    color: white; 
+a {
+    color: white;
     text-decoration: none;
 }
 
-.hero{
+.hero {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -99,71 +100,79 @@ a {
     background-repeat: no-repeat;
     overflow: hidden;
     transition: ease-in-out 2s;
-    
+
 
 }
 
 
 
 @keyframes slide-down {
-  0% { opacity: 0; -webkit-transform: translateY(-100%); }   
-100% { opacity: 1; -webkit-transform: translateY(0); }
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
 }
 
 @keyframes fadeInAnimation {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-   }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
-.welcome-box{
+.welcome-box {
     backdrop-filter: blur(2px);
 }
 
-.welcome-titles{
+.welcome-titles {
     display: inline;
     font-size: 60px;
 }
 
-.welcome-title-holder{
-  visibility: visible;
-  animation: fadeInAnimation ease-in 1.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  text-align: center;
+.welcome-title-holder {
+    visibility: visible;
+    animation: fadeInAnimation ease-in 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    text-align: center;
 }
 
-.welcome-button{
-  display: block;
-  margin: 25px auto;
-  padding: 25px 25px;
-  border: 2px solid #FFC133;
-  border-radius: 30px; 
-  width: 75%;
-  text-align: center;
-  backdrop-filter: blur(5px);
-  opacity: 0;
-  transition: 1.5s
+.welcome-button {
+    display: block;
+    margin: 25px auto;
+    padding: 25px 25px;
+    border: 2px solid #FFC133;
+    border-radius: 30px;
+    width: 75%;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: 1.5s
 }
 
-.welcome-button:hover{
-  background-color: #c7834b;
-  transition: 500ms ease-in-out
+.welcome-button:hover {
+    background-color: #c7834b;
+    transition: 500ms ease-in-out
 }
 
-.welcome-button-font{
-  font-size: 25px;
-  display: inline;
-  font-family: copperplate;
+.welcome-button-font {
+    font-size: 25px;
+    display: inline;
+    font-family: copperplate;
 }
 
 /* HOMEPAGE -------------------- */
 /* Header */
 
-nav{
+nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -172,7 +181,7 @@ nav{
     background-image: var(--linear);
 }
 
-.nav-links{
+.nav-links {
     color: white;
     display: flex;
     flex-direction: column;
@@ -184,18 +193,19 @@ nav{
     text-align: center;
     font-family: copperplate;
     margin: auto;
+    opacity: 1
 }
 
 .highlighted-options {
-    background-color :#FF9033;
+    background-color: #FF9033;
 }
 
-.nav-links-selected{
+.nav-links-selected {
     margin: 0 auto;
     transition: ease-in-out 0.2s;
 }
 
-.nav-links-selected:hover{
+.nav-links-selected:hover {
     opacity: 1;
     border-bottom: 3px solid var(--primary-color);
 }
@@ -203,43 +213,41 @@ nav{
 
 /* Introduction & Hero */
 
-#hero-2{
+#hero-2 {
     text-align: center;
     transition: ease-in-out 1.5s
 }
 
-.intro-div{
+.intro-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.intro-div > div{
+.intro-div>div {
     padding: 20px 20px 20px 20px
 }
 
 
-.intro-title{
+.intro-title {
     font-size: 40px
 }
 
-.titles{
+.titles {
     text-align: center;
 }
 
 
-.video{
+.video {
     display: block;
     margin: 0 auto;
     width: 800px;
     height: 500px;
 }
 
-iframe{
+iframe {}
 
-}
-
-.dashboard{
+.dashboard {
 
     font-size: 25px;
     color: white;
@@ -249,25 +257,25 @@ iframe{
     margin: 0 auto
 }
 
-.dashboard-carousel{
+.dashboard-carousel {
     display: flex;
     flex-direction: row;
     overflow: hidden;
 }
 
-.dashboard-posts{
+.dashboard-posts {
 
     width: 100%;
     flex-shrink: 0;
     transition: ease-in-out 1s;
-    
+
 }
 
-.post-text{
+.post-text {
     text-align: center;
 }
 
-.post-link{
+.post-link {
     display: block;
     color: var(--fourth-color);
     font-weight: bold;
@@ -276,47 +284,45 @@ iframe{
     margin: 10px auto
 }
 
-.post-user{
+.post-user {
     font-family: 'Raleway', sans-serif;
     font-style: italic;
 }
 
 
-.copperplate{
+.copperplate {
     font-family: copperplate;
     text-align: center;
 }
 
-.dashboard-button{
+.dashboard-button {
     padding: 10px;
     border-radius: 25px;
 }
 
-.equation{
+.equation {
     padding: 20px 0;
     border-radius: 25px;
     background-color: var(--fourth-color);
 
 }
 
-.equation > h2{
+.equation>h2 {
     font-size: 30px;
     font-weight: bold;
 
 
 }
 
-.equation > h2:nth-child(odd){
+.equation>h2:nth-child(odd) {
     color: black
-
 }
 
-.equation > h2:nth-child(even){
+.equation>h2:nth-child(even) {
     color: var(--secondary-color)
-
 }
 
-.equation > h2:last-child{
+.equation>h2:last-child {
     color: var(--primary-color);
     font-size: 35px;
 
@@ -327,32 +333,31 @@ iframe{
 
 /* Skylark Section Venue */
 
-.venue-imgs{
+.venue-imgs {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 30px auto;
 }
 
-.skylark-imgs{
+.skylark-imgs {
     display: block;
     background-image: url('../media/lounge.png');
     background-size: 210%;
     background-position-x: 50%;
-    width: 400px;  
+    width: 400px;
     height: 400px;
     margin: 0 auto;
     transition: ease-in-out 1.5s;
     border: 5px solid var(--fourth-color)
-
 }
 
-.skylark-imgs-2{
+.skylark-imgs-2 {
     display: block;
     background-image: url('../media/lounge-2.png');
     background-size: 180%;
     background-position-x: 30%;
-    width: 400px;  
+    width: 400px;
     height: 400px;
     margin: 0 auto;
     transition: ease-in-out 1.5s;
@@ -360,31 +365,30 @@ iframe{
 }
 
 
-.skylark-imgs-3{
+.skylark-imgs-3 {
     display: block;
     background-image: url('../media/lounge-3.png');
     background-size: 180%;
     background-position-x: 30%;
-    width: 400px;  
+    width: 400px;
     height: 400px;
     margin: 0 auto;
     transition: ease-in-out 1.5s;
     border: 5px solid var(--fourth-color)
-
 }
 
-.venue-info{
+.venue-info {
     display: flex;
     margin: 30px auto;
 }
 
-.venue-info-blocks{
+.venue-info-blocks {
     width: 45%;
     margin: 0 auto;
 }
 
-.venue-info-blocks > iframe { 
-    display: block; 
+.venue-info-blocks>iframe {
+    display: block;
     height: 400px;
     width: 100%;
     margin: 0 auto;
@@ -392,17 +396,17 @@ iframe{
 
 /* Section Sign Up */
 
-.registration{
+.registration {
     margin: 0 auto
 }
 
-.form-info > label {
+.form-info>label {
     font-family: copperplate;
     font-size: 25px;
     color: white
 }
 
-.personal-info{
+.personal-info {
     box-sizing: border-box;
 }
 
@@ -415,13 +419,13 @@ iframe{
 
 /* Footer */
 
-footer{
+footer {
     height: fit-content;
     background-color: var(--secondary-color);
     background-image: var(--linear);
 }
 
-.footer-flex{
+.footer-flex {
     width: 90%;
     margin: 0 auto;
     padding: 20px 20px 20px 20px;
@@ -430,76 +434,78 @@ footer{
     justify-content: space-between;
 }
 
-footer p{
+footer p {
     font-family: copperplate;
 }
 
 /* FORM PAGE --------------------------*/
 /* Fill Out Form */
 
-label,input{
+label,
+input {
     display: block;
     margin-top: 10px;
     width: 25%
 }
 
-form > p{
+form>p {
     font-family: copperplate
 }
 
-.attendance{
+.attendance {
     width: 25%
 }
 
-.attendance > label,input{
+.attendance>label,
+input {
     display: inline;
 
 }
 
-.form-components{
-    font-family:'monospace', monaco;
+.form-components {
+    font-family: 'monospace', monaco;
     margin-top: 10px;
 }
 
 label {
-    color:white
+    color: white
 }
 
-button{
-    background-color: rgba(0,0,0,0);
+button {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 /* Media Queries ------------------------- */
 
-@media screen and (max-width: 1600px){
-    .venue-split{
+@media screen and (max-width: 1600px) {
+    .venue-split {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
     }
 
-    .venue-imgs{
+    .venue-imgs {
         display: block;
         width: 50%
     }
 
-    .venue-imgs > *{
+    .venue-imgs>* {
         display: block;
     }
 
-    .venue-info{
+    .venue-info {
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
 
-    .venue-info-blocks{
+    .venue-info-blocks {
         width: 80%
     }
 
-    .venue-info-blocks > iframe { 
-        display: block; 
+    .venue-info-blocks>iframe {
+        display: block;
         height: 800px;
         width: 100%;
         margin: 0 auto;
@@ -507,69 +513,71 @@ button{
 
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
 
-    .venue-split > * {
+    .venue-split>* {
         width: 100%;
     }
 
-    .venue-info-blocks > iframe { 
-        display: block; 
+    .venue-info-blocks>iframe {
+        display: block;
         height: 400px;
         width: 100%;
         margin: 0 auto;
         margin-bottom: 20px;
     }
 
-    .video{
+    .video {
         width: 550px;
         height: 350px;
     }
 }
 
 
-@media screen and (max-width: 768px){
+
+
+@media screen and (max-width: 768px) {
 
     /* shortern nav */
-    .full-width{
+    .full-width {
         width: 100%;
         text-align: center;
         padding: 0
     }
 
-    .video{
+    .video {
         width: 400px;
         height: 300px;
     }
 
 
-      .mobile-toggle {
+    .mobile-toggle {
         width: 100%;
         height: 35px;
-      }
+    }
 
-      #mobileMenu{
+    #mobileMenu {
         transition: all 0.5s ease-in-out;
-      }
-    
-      .mobile-options {
+    }
+
+    .mobile-options {
         background-color: var(--primary-color);
         width: 35px;
         height: 5px;
         margin: 5px auto;
         transition: all 0.5s ease-in-out;
-      }
-    
-      .nav-links{
+    }
+
+    .nav-links {
         opacity: 0;
         height: 0px;
         width: 100%;
         flex-direction: row;
         justify-content: center;
         transition: ease-in-out 1s
-      }
-    
-      .mobile-effect{
+    }
+
+    .mobile-effect {
         transition: ease-in-out 0.75s;
         opacity: 1;
         text-align: center;
@@ -577,90 +585,97 @@ button{
         width: 100%;
         display: table;
         margin: auto
-      }
-    
-      #mobile-menu.active .mobile-options:nth-child(2){
+    }
+
+    #mobile-menu.active .mobile-options:nth-child(2) {
         transition: all 0.5s ease-in-out;
         opacity: 0;
-      }
-    
-      #mobile-menu.active .mobile-options:nth-child(1){
+    }
+
+    #mobile-menu.active .mobile-options:nth-child(1) {
         transition: all 0.5s ease-in-out;
         transform: translateY(10px) rotate(45deg);
-      }
-    
-      #mobile-menu.active .mobile-options:nth-child(3){
+    }
+
+    #mobile-menu.active .mobile-options:nth-child(3) {
         transition: all 0.5s ease-in-out;
         transform: translateY(-10px) rotate(-45deg);
-      }  
+    }
 }
+/* 
+@media screen and (min-width: 769px){
+    .nav-links{
+        opacity: 1;
+        height: 50px
+    }
+} */
 
-@media screen and (max-width: 650px){
-    .footer-flex{
+@media screen and (max-width: 650px) {
+    .footer-flex {
         display: block;
     }
 
-    .footer-flex > div{
+    .footer-flex>div {
         text-align: center;
-    } 
+    }
 
-    .video{
+    .video {
         width: 300px;
         height: 200px;
 
     }
 
-    section > div {
+    section>div {
         padding: 20px 0 20px 0
     }
 
-    .dashboard{
+    .dashboard {
         width: 75%;
         padding: 15px;
     }
 
 
 
-    .dashboard-button{
+    .dashboard-button {
         width: 90%;
         margin: 0 auto;
         border-radius: 25px;
     }
-    
+
 }
 
 
- 
- @media screen and (max-width: 575px){
+
+@media screen and (max-width: 575px) {
     .skylark-imgs {
-        width: 250px;  
+        width: 250px;
         height: 250px;
         margin-bottom: 20px;
     }
 
     .skylark-imgs-2 {
-        width: 250px;  
+        width: 250px;
         height: 250px;
         margin-bottom: 20px;
     }
 
     .skylark-imgs-3 {
-        width: 250px;  
+        width: 250px;
         height: 250px;
         margin-bottom: 20px;
     }
 
-    .video{
+    .video {
         width: 250px;
         height: 150px;
         display: inline;
     }
 
-    .venue-info-blocks > iframe { 
+    .venue-info-blocks>iframe {
         height: 200px;
     }
 
-    .textbox{
+    .textbox {
         width: 80%;
     }
 }
@@ -668,6 +683,3 @@ button{
 
 
 /* nav bar */
-
-
-
