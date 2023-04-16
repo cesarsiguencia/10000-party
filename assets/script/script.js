@@ -3,11 +3,13 @@ var welcomeCarousel = document.querySelector("#welcome-carousel")
 var welcomeTitleHolder = ''
 var i = 0
 var x = 1
+var y = 0
 var header = document.querySelector("#mobileMenu")
 var navBar = document.querySelector("#nav")
 var navBarLinks = document.querySelectorAll(".nav-links")
 var clicked = 1
 var posts = document.querySelectorAll('.dashboard-posts')
+var timerProgress = document.querySelector(".timer-progress")
 var dashboard = document.querySelector('.dashboard-carousel')
 var barHeight = ""
 var selectedElement = ""
@@ -140,7 +142,6 @@ function shrinkMenu() {
 
 function bringBarBack(){
     var screenWidth = document.body.clientWidth
-    console.log(screenWidth)
     if (screenWidth > 768){
         navBarLinks.forEach((link) => {
             link.removeAttribute("style")
@@ -194,7 +195,6 @@ function smoothScroll(event) {
 
 
     var section = event.target.id
-    console.log(section)
     selectedElement = document.querySelector(`${section}`)
     selectedElement.style.opacity = 0
     selectedElement.scrollIntoView({
@@ -212,8 +212,6 @@ function smoothScroll(event) {
 }
 
 function scrollAdjuster() {
-
-    console.log(barHeight)
     window.scrollBy({
         behavior: 'smooth',
         top: -`${barHeight + 20}`
@@ -225,7 +223,30 @@ function scrollAdjuster() {
 
 }
 
+function timeProgress(){
+    y = y + 0.5
+    timerProgress.style.width = `${y}%`
 
+    if(y == 100){
+        y = 0
+    }
+    
+
+}
+
+// function scrollIntoViewWithOffset(event){
+//     offset = navBar.clientHeight;
+//     var section = event.target.id
+//     console.log(section)
+//     selectedElement = document.querySelector(`${section}`)
+//     window.scrollTo({
+//       behavior: 'smooth',
+//       top:
+//         selectedElement.getBoundingClientRect().top -
+//         document.body.getBoundingClientRect().top - offset,
+//     })
+// }
+// navBar.addEventListener("click", scrollIntoViewWithOffset)
 
 
 document.addEventListener("scroll", introParallax);
@@ -237,6 +258,7 @@ document.addEventListener("scroll", homeParallax)
 document.addEventListener("scroll", venueImgsParallax)
 header.addEventListener("click", hamburgerMenu)
 setInterval(postsCarousel, 8000)
+setInterval(timeProgress, 40)
 
 
 navBar.addEventListener("click", smoothScroll)

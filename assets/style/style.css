@@ -300,6 +300,22 @@ iframe {}
     border-radius: 25px;
 }
 
+.timer-bar{
+    margin: 15px 0;
+    height: 5px;
+    background-color: var(--primary-color);
+}
+
+.timer-progress{
+    width: 0%;
+    background-color: var(--fourth-color);
+    background: linear-gradient(.25turn, var(--fourth-color), 99%, var(--primary-color));
+    height: 5px;
+    transition: ease-in-out;
+    
+    
+}
+
 .equation {
     padding: 20px 0;
     border-radius: 25px;

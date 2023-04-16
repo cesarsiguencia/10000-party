@@ -3,7 +3,7 @@
 <div class="body">
 
     <div class="hero">
-        <div  id="hero-2">
+        <div id="hero-2">
             <p class="welcome-titles">Saturday,</p>
             <p class="welcome-titles">October 21st, 2023</p>
         </div>
@@ -15,37 +15,44 @@
 
     <section id="introduction">
         <div class="intro-div">
-                    <div class="headings">
-            <div class="titles">
-                <h2 class="intro-title">Welcome To My 10,000 Days Of Life!</h2>
+            <div class="headings">
+                <div class="titles">
+                    <h2 class="intro-title">Welcome To My 10,000 Days Of Life!</h2>
+                </div>
+
+
+            </div>
+
+            <div class="full-width">
+                <iframe class="video" src="https://drive.google.com/file/d/1dDOObMUn-SSuRPp826UlG1dgLZNsSkJW/preview"
+                    width="100%" allow="autoplay"></iframe>
             </div>
 
 
-        </div>
-
-        <div class="full-width">
-            <iframe class="video" src="https://drive.google.com/file/d/1dDOObMUn-SSuRPp826UlG1dgLZNsSkJW/preview" width="100%" allow="autoplay"></iframe>
-        </div>
-
-
-        <div class="dashboard">
+            <div class="dashboard">
                 <p class="copperplate">Here Is What Attendees Are Already Saying!</p>
-                    <div class="dashboard-carousel">
-                        {{#each posts as |post|}}
-                            <div class="dashboard-posts">
-                                {{> attendee-posts post}}
-                     </div>
-                        {{/each}}
+                <div class="dashboard-carousel">
+                    {{#each posts as |post|}}
+                    <div class="dashboard-posts">
+                        {{> attendee-posts post}}
                     </div>
- 
-            <div class="dashboard-button highlighted-options nav-links-selected ">
-                <a href="/register">
-                <h6>
-                    Join the conversation by registering today!
-                </h6>
-                </a>
-            </div>
-        </div>
+                    {{/each}}
+                </div>
+
+                <div class="timer-bar">
+                    <div class="timer-progress">
+
+                    </div>
+                </div>
+
+                <div class="dashboard-button highlighted-options nav-links-selected ">
+                    <a href="/register">
+                        <h6>
+                            Join the conversation by registering today!  
+                        </h6>
+                    </a>
+                </div>
+            </div> 
         </div>
 
     </section>
@@ -152,13 +159,13 @@
 
             <div class="equation">
                 <h2>TUESDAY, JUNE 4, 1996</h2>
-                <h2>  + </h2> 
-                <h2> 10,000 DAYS  </h2>  
-                 <h2>  =  </h2>  
-                 <h2>SATURDAY, OCTOBER 21ST, 2023</h2>
+                <h2> + </h2>
+                <h2> 10,000 DAYS </h2>
+                <h2> = </h2>
+                <h2>SATURDAY, OCTOBER 21ST, 2023</h2>
             </div>
 
-            
+
             <br />
             <p>
 
@@ -249,12 +256,14 @@
                     </div>
 
                     <div class="venue-info-blocks">
-                        <p>We will unite at the popular Skylark in New York City, footsteps away from the crossroads of the
+                        <p>We will unite at the popular Skylark in New York City, footsteps away from the crossroads of
+                            the
                             world and an epic view of the iconic Empire State Building. </p>
 
                         <br />
 
-                        <p>Skylark features two floors of drinking, a rooftop with a skyline, a dance floor, a pool table,
+                        <p>Skylark features two floors of drinking, a rooftop with a skyline, a dance floor, a pool
+                            table,
                             and
                             much more.</p>
 
