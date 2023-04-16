@@ -1,6 +1,6 @@
-var welcomeBox = document.querySelector(".intro-box")
-var carouselBox = document.querySelector("#carousel-words")
-var wordBox = ''
+var welcomeBox = document.querySelector(".welcome-box")
+var welcomeCarousel = document.querySelector("#welcome-carousel")
+var welcomeTitleHolder = ''
 var i = 0
 var x = 1
 var header = document.querySelector("#mobileMenu")
@@ -14,18 +14,19 @@ var dashboard = document.querySelector('.dashboard-carousel')
 
 
 function changeWords(){
-    var words = ["You're Invited!", "On my 10,000th day of life", "Saturday, October 21st, 2023"]
+    var welcomeWords = ["You're Invited!", "On my 10,000th day of life", "Saturday, October 21st, 2023"]
 
-    if(wordBox){
-        wordBox.remove()
+    if(welcomeTitleHolder){
+        welcomeTitleHolder.remove()
     }
-    wordBox = document.createElement("div");
-    wordBox.className = 'intro-box-words'
-    wordBox.innerHTML = "<p class='welcome-title'>" + words[i] + "</p>"
+    welcomeTitleHolder = document.createElement("div");
+    welcomeTitleHolder.className = 'welcome-title-holder'
+    welcomeTitleHolder.innerHTML = "<p class='welcome-titles'>" + welcomeWords[i] + "</p>"
 
-    carouselBox.appendChild(wordBox)
+    
+    welcomeCarousel.appendChild(welcomeTitleHolder)
 
-    if(i < words.length-1){
+    if(i < welcomeWords.length-1){
         i++
     } else {
         return
@@ -55,6 +56,7 @@ function introParallax(event){
     if (scrollPosition > 20) {
         hero.style.height = "100vh";
     } else {
+
         hero.style.height = "120vh";
     } 
 } 

@@ -5,7 +5,7 @@ const homeRoutes = require('./homepage')
 const registerRoutes = require('./registration')
 
 router.get('/', (req,res) => {
-    res.render("intro")
+    res.render("welcome")
 })
 
 router.use('/home', homeRoutes)
