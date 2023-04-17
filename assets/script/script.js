@@ -1,13 +1,10 @@
 var welcomeBox = document.querySelector(".welcome-box")
 var welcomeCarousel = document.querySelector("#welcome-carousel")
 var welcomeTitleHolder = ''
-var i = 0
-var x = 1
-var y = 0
 var header = document.querySelector("#mobileMenu")
 var navBar = document.querySelector("#nav")
 var navBarLinks = document.querySelectorAll(".nav-links")
-var clicked = 1
+
 var posts = document.querySelectorAll('.dashboard-posts')
 var timerProgress = document.querySelector(".timer-progress")
 var dashboard = document.querySelector('.dashboard-carousel')
@@ -15,9 +12,7 @@ var barHeight = ""
 var selectedElement = ""
 
 
-
-
-function changeWords() {
+function changeWords(currentIndex) {
     var welcomeWords = ["You're Invited!", "On my 10,000th day of life", "Saturday, October 21st, 2023"]
 
     if (welcomeTitleHolder) {
@@ -25,18 +20,18 @@ function changeWords() {
     }
     welcomeTitleHolder = document.createElement("div");
     welcomeTitleHolder.className = 'welcome-title-holder'
-    welcomeTitleHolder.innerHTML = "<p class='welcome-titles'>" + welcomeWords[i] + "</p>"
-
+    welcomeTitleHolder.innerHTML = "<p class='welcome-titles'>" + welcomeWords[currentIndex] + "</p>"
 
     welcomeCarousel.appendChild(welcomeTitleHolder)
-
-    if (i < welcomeWords.length - 1) {
-        i++
+    var nextIndex = ""
+    if (currentIndex < welcomeWords.length - 1) {
+        currentIndex++
     } else {
         return
     }
 
-    setTimeout("changeWords()", 4000)
+    nextIndex = currentIndex
+    setTimeout(changeWords, 4000, nextIndex)
 }
 
 function insertHomeBtn() {
@@ -88,7 +83,6 @@ function homeParallax(event) {
 }
 
 
-
 function venueImgsParallax(event) {
     const skylark1 = document.querySelector(".skylark-imgs")
     const skylark2 = document.querySelector(".skylark-imgs-2")
@@ -113,13 +107,11 @@ function hamburgerMenu() {
         navBar.classList.toggle("mobile-effect")
         shrinkMenu()
     } 
-
-
-
 }
 
-function shrinkMenu() {
+var clicked = 1
 
+function shrinkMenu() {
     if (clicked == 1) {
         navBarLinks.forEach((link) => {
             link.style.height = "50px"
@@ -137,7 +129,6 @@ function shrinkMenu() {
         clicked = 1
         return
     }
-
 }
 
 function bringBarBack(){
@@ -149,14 +140,38 @@ function bringBarBack(){
     }
 }
 
+// function postsCarousel(currentPost) {
+//     var nextPost = ""
 
+//     if (currentPost == 3) {
+//         posts.forEach((post) => {
+//             post.style.transform = "translate(0%)"
+//         })
+//         nextPost = 1
+//     }
 
+//     if (currentPost == 2) {
+//         posts.forEach((post) => {
+//             post.style.transform = "translate(-200%)"
+//         })
+//         nextPost = 3
+//     }
 
+//     if (currentPost == 1) {
+//         posts.forEach((post) => {
+//             post.style.transform = "translate(-100%)"
+//         })
+//         nextPost = 2
+//     }
+//     console.log(currentPost)
+//     setInterval(postsCarousel, 8000, nextPost)
+// }
 
+var x = 1
 
-function postsCarousel() {
+function postsCarousel(){
 
-    if (x == 1) {
+    if(x == 1){
         posts.forEach((post) => {
             post.style.transform = "translate(-100%)"
         })
@@ -164,7 +179,7 @@ function postsCarousel() {
         return
     }
 
-    if (x == 2) {
+    if(x == 2){
         posts.forEach((post) => {
             post.style.transform = "translate(-200%)"
         })
@@ -172,7 +187,7 @@ function postsCarousel() {
         return
     }
 
-    if (x == 3) {
+    if(x == 3){
         posts.forEach((post) => {
             post.style.transform = "translate(0%)"
         })
@@ -182,18 +197,16 @@ function postsCarousel() {
 
 
 
+    
+        
 
-
-
-}
+}   
 
 
 
 function smoothScroll(event) {
     barHeight = navBar.clientHeight;
     
-
-
     var section = event.target.id
     selectedElement = document.querySelector(`${section}`)
     selectedElement.style.opacity = 0
@@ -202,12 +215,7 @@ function smoothScroll(event) {
         behavior: 'smooth',
 
     });
-
-
-
-
     setTimeout(scrollAdjuster, 800)
-
 
 }
 
@@ -218,10 +226,10 @@ function scrollAdjuster() {
     })
     selectedElement.style.transition = "2s"
     selectedElement.style.opacity = 1
-
-    
-
 }
+
+
+var y = 0
 
 function timeProgress(){
     y = y + 0.5
@@ -234,29 +242,16 @@ function timeProgress(){
 
 }
 
-// function scrollIntoViewWithOffset(event){
-//     offset = navBar.clientHeight;
-//     var section = event.target.id
-//     console.log(section)
-//     selectedElement = document.querySelector(`${section}`)
-//     window.scrollTo({
-//       behavior: 'smooth',
-//       top:
-//         selectedElement.getBoundingClientRect().top -
-//         document.body.getBoundingClientRect().top - offset,
-//     })
-// }
-// navBar.addEventListener("click", scrollIntoViewWithOffset)
-
 
 document.addEventListener("scroll", introParallax);
 window.onload = loadParallax
-setTimeout("changeWords()", 1000)
+setTimeout(changeWords, 1000, 0)
 setTimeout("insertHomeBtn()", 1000)
 setTimeout("appearButton()", 12000)
 document.addEventListener("scroll", homeParallax)
 document.addEventListener("scroll", venueImgsParallax)
 header.addEventListener("click", hamburgerMenu)
+// setTimeout(postsCarousel, 8000, 1)
 setInterval(postsCarousel, 8000)
 setInterval(timeProgress, 40)
 
