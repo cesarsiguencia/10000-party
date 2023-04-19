@@ -9,7 +9,7 @@ function changeWords(currentIndex) {
         welcomeTitleHolder.remove()
     }
     welcomeTitleHolder = document.createElement("div");
-    welcomeTitleHolder.className = 'welcome-title-holder'
+    welcomeTitleHolder.className = 'welcome-title-holder text-center'
     welcomeTitleHolder.innerHTML = "<p class='welcome-titles'>" + welcomeWords[currentIndex] + "</p>"
 
     welcomeCarousel.appendChild(welcomeTitleHolder)
@@ -27,7 +27,7 @@ function changeWords(currentIndex) {
 function insertHomeBtn() {
     var buttonItem = document.createElement("a")
     buttonItem.className = 'welcome-button'
-    buttonItem.innerHTML = '<p class="welcome-button-font copperplate">Click here for awesomeness</p> '
+    buttonItem.innerHTML = '<p class="welcome-button-font text-center copperplate-font">Click here for awesomeness</p> '
     welcomeBox.appendChild(buttonItem)
 }
 

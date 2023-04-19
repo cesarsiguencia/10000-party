@@ -31,10 +31,11 @@ function welcomeTitlesParallax(event) {
 
 
 function venueImgsParallax(event) {
-    const skylark1 = document.querySelector(".skylark-imgs")
-    const skylark2 = document.querySelector(".skylark-imgs-2")
-    const skylark3 = document.querySelector(".skylark-imgs-3")
+    const skylark1 = document.querySelector(".skylark-img")
+    const skylark2 = document.querySelector(".skylark-img-2")
+    const skylark3 = document.querySelector(".skylark-img-3")
     const scrollPosition = event.target.scrollingElement.scrollTop;
+    console.log(scrollPosition)
     if (scrollPosition > 2000) {
         skylark1.style.backgroundSize = "230%"
         skylark2.style.backgroundSize = "200%"

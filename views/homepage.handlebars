@@ -2,8 +2,8 @@
 
 <div class="body">
 
-    <div class="hero">
-        <div id="hero-2">
+    <div class="hero flex-row justify-center">
+        <div id="hero-2" class="text-center">
             <p class="welcome-titles">Saturday,</p>
             <p class="welcome-titles">October 21st, 2023</p>
         </div>
@@ -11,18 +11,18 @@
     </div>
 
     <section id="introduction">
-        <div class="intro-div">
+        <div class="intro-div flex-column">
 
             <h2 class="intro-title">Welcome To My 10,000 Days Of Life!</h2>
 
             <div class="full-width">
-                <iframe class="video" src="https://drive.google.com/file/d/1dDOObMUn-SSuRPp826UlG1dgLZNsSkJW/preview"
+                <iframe class="video margin-center" src="https://drive.google.com/file/d/1dDOObMUn-SSuRPp826UlG1dgLZNsSkJW/preview"
                     width="100%" allow="autoplay"></iframe>
             </div>
 
-            <div class="dashboard">
-                <p class="copperplate">Here Is What Attendees Are Already Saying!</p>
-                <div class="dashboard-carousel">
+            <div class="dashboard margin-center">
+                <h6>Here Is What Attendees Are Already Saying!</h6>
+                <div class="dashboard-carousel flex-row">
                     {{#each posts as |post|}}
                     <div class="dashboard-posts">
                         {{> attendee-posts post}}
@@ -36,7 +36,7 @@
                     </div>
                 </div>
 
-                <div class="dashboard-button highlighted-options nav-links-selected ">
+                <div class="dashboard-button highlighted-options nav-links-selected text-center ">
                     <a href="/register">
                         <h6>Join the conversation by registering today!</h6>
                     </a>
@@ -214,18 +214,18 @@
         <div>
             <h3>Skylark: A Venue of it's own class</h3>
             <div class="venue-split">
-                <div class="venue-imgs">
-                    <a class="skylark-imgs" href="https://www.theskylarknyc.com/" target="_blank">
+                <div class="venue-imgs-block flex-row">
+                    <a class="imgs skylark-img margin-center" href="https://www.theskylarknyc.com/" target="_blank">
 
 
                     </a>
 
-                    <a class="skylark-imgs-2" href="https://www.theskylarknyc.com/" target="_blank">
+                    <a class="imgs skylark-img-2 margin-center" href="https://www.theskylarknyc.com/" target="_blank">
 
 
                     </a>
 
-                    <a class="skylark-imgs-3" href="https://www.theskylarknyc.com/" target="_blank">
+                    <a class="imgs skylark-img-3 margin-center" href="https://www.theskylarknyc.com/" target="_blank">
 
 
                     </a>
@@ -233,7 +233,7 @@
 
                 <div class="venue-info">
 
-                    <div class="venue-info-blocks">
+                    <div class="venue-info-blocks margin-center">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6044.627158340502!2d-73.99753744074506!3d40.75512729283367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259ab62c9c3b5%3A0xb492fc9c0041218a!2sThe%20Skylark!5e0!3m2!1sen!2sus!4v1680958158815!5m2!1sen!2sus"
                             style="border:0;" allowfullscreen="" loading="lazy"
@@ -303,7 +303,7 @@
 
                 </div>
                 <div>
-                    <form class="registration">
+                    <form class="registration margin-center">
                         <div class="form-info">
                             <label for="name">First Name</label>
                             <input type="text" name="name" class="textbox" />

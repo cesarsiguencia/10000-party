@@ -8,8 +8,6 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background-color: var(--secondary-color);
-
-
 }
 
 * {
@@ -21,13 +19,9 @@
 
 html,
 body {
-    height: 100%;
     margin: 0;
     padding: 0;
-
-
 }
-
 
 section:nth-child(odd) {
     background-color: var(--third-color)
@@ -42,25 +36,14 @@ section {
     padding: 20px 20px 20px 20px
 }
 
-
 section>div {
     width: 80%;
     margin: 0 auto;
-
 }
 
 p {
     color: white;
     font-family: "Euclid Circular A", "Poppins";
-}
-
-h3 {
-    display: block;
-    font-family: copperplate;
-    font-size: 35px;
-    color: white;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 h1 {
@@ -75,11 +58,43 @@ h2 {
     font-weight: 100;
 }
 
+h3 {
+    display: block;
+    font-family: copperplate;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 h6 {
     font-family: copperplate;
     text-align: center;
-    font-size: 20px;
-    display: inline;
+    font-size: 22px;
+    display: block
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.margin-center{
+    margin: 0 auto
+}
+
+.text-center{
+    text-align: center;
+}
+
+.justify-center{
+    justify-content: center;
+    align-items: center;
 }
 
 /* INTRO PAGE--------------------------*/
@@ -90,10 +105,6 @@ a {
 }
 
 .hero {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     background-image: url('../media/empire.png');
     background-size: cover;
@@ -101,11 +112,7 @@ a {
     background-repeat: no-repeat;
     overflow: hidden;
     transition: ease-in-out 2s;
-
-
 }
-
-
 
 @keyframes slide-down {
     0% {
@@ -143,7 +150,6 @@ a {
     animation: fadeInAnimation ease-in 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    text-align: center;
 }
 
 .welcome-button {
@@ -153,7 +159,6 @@ a {
     border: 2px solid #FFC133;
     border-radius: 30px;
     width: 75%;
-    text-align: center;
     backdrop-filter: blur(5px);
     opacity: 0;
     transition: 1.5s
@@ -166,7 +171,9 @@ a {
 
 .welcome-button-font {
     font-size: 25px;
-    display: inline;
+}
+
+.copperplate-font{
     font-family: copperplate;
 }
 
@@ -183,6 +190,7 @@ nav {
 }
 
 .nav-links {
+    display: flex;
     color: white;
     display: flex;
     flex-direction: column;
@@ -211,77 +219,50 @@ nav {
     border-bottom: 3px solid var(--primary-color);
 }
 
-
 /* Introduction & Hero */
 
 #hero-2 {
-    text-align: center;
     transition: ease-in-out 1.5s
-}
-
-.intro-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .intro-div>div {
     padding: 20px 20px 20px 20px
 }
 
-
 .intro-title {
     font-size: 40px
 }
 
-.titles {
-    text-align: center;
-}
-
-
 .video {
     display: block;
-    margin: 0 auto;
     width: 800px;
     height: 500px;
 }
 
-iframe {}
-
 .dashboard {
-
     font-size: 25px;
     color: white;
     width: 60%;
     background-color: var(--third-color);
     border-radius: 25px;
-    margin: 0 auto
 }
 
 .dashboard-carousel {
-    display: flex;
-    flex-direction: row;
     overflow: hidden;
 }
 
 .dashboard-posts {
-
     width: 100%;
     flex-shrink: 0;
     transition: ease-in-out 1s;
-
 }
 
-.post-text {
-    text-align: center;
-}
 
 .post-link {
     display: block;
     color: var(--fourth-color);
     font-weight: bold;
     text-decoration: underline;
-    text-align: center;
     margin: 10px auto
 }
 
@@ -291,15 +272,9 @@ iframe {}
 }
 
 
-.copperplate {
-    font-family: copperplate;
-    text-align: center;
-}
-
 .dashboard-button {
     padding: 10px;
     border-radius: 25px;
-    text-align: center;
 }
 
 .timer-bar{
@@ -314,22 +289,17 @@ iframe {}
     background: linear-gradient(.25turn, var(--fourth-color), 99%, var(--primary-color));
     height: 5px;
     transition: ease-in-out;
-    
-    
 }
 
 .equation {
     padding: 20px 0;
     border-radius: 25px;
     background-color: var(--fourth-color);
-
 }
 
 .equation>h2 {
     font-size: 30px;
     font-weight: bold;
-
-
 }
 
 .equation>h2:nth-child(odd) {
@@ -343,56 +313,39 @@ iframe {}
 .equation>h2:last-child {
     color: var(--primary-color);
     font-size: 35px;
-
 }
-
-
-
 
 /* Skylark Section Venue */
 
-.venue-imgs {
-    display: flex;
-    flex-direction: row;
+.venue-imgs-block{
     justify-content: space-between;
     margin: 30px auto;
 }
 
-.skylark-imgs {
+.imgs{
     display: block;
+    width: 400px;
+    height: 400px;
+    transition: ease-in-out 1.5s;
+    border: 5px solid var(--fourth-color)
+}
+
+.skylark-img {
     background-image: url('../media/lounge.png');
     background-size: 210%;
     background-position-x: 50%;
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-    transition: ease-in-out 1.5s;
-    border: 5px solid var(--fourth-color)
 }
 
-.skylark-imgs-2 {
-    display: block;
+.skylark-img-2 {
     background-image: url('../media/lounge-2.png');
     background-size: 180%;
     background-position-x: 30%;
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-    transition: ease-in-out 1.5s;
-    border: 5px solid var(--fourth-color)
 }
 
-
-.skylark-imgs-3 {
-    display: block;
+.skylark-img-3 {
     background-image: url('../media/lounge-3.png');
     background-size: 180%;
     background-position-x: 30%;
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-    transition: ease-in-out 1.5s;
-    border: 5px solid var(--fourth-color)
 }
 
 .venue-info {
@@ -402,7 +355,6 @@ iframe {}
 
 .venue-info-blocks {
     width: 45%;
-    margin: 0 auto;
 }
 
 .venue-info-blocks>iframe {
@@ -413,10 +365,6 @@ iframe {}
 }
 
 /* Section Sign Up */
-
-.registration {
-    margin: 0 auto
-}
 
 .form-info>label {
     font-family: copperplate;
@@ -445,15 +393,8 @@ footer {
 
 .footer-flex {
     width: 90%;
-    margin: 0 auto;
     padding: 20px 20px 20px 20px;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-}
-
-footer p {
-    font-family: copperplate;
 }
 
 /* FORM PAGE --------------------------*/
@@ -477,7 +418,6 @@ form>p {
 .attendance>label,
 input {
     display: inline;
-
 }
 
 .form-components {
@@ -489,10 +429,6 @@ label {
     color: white
 }
 
-button {
-    background-color: rgba(0, 0, 0, 0);
-}
-
 /* Media Queries ------------------------- */
 
 @media screen and (max-width: 1600px) {
@@ -502,12 +438,12 @@ button {
         flex-direction: row;
     }
 
-    .venue-imgs {
+    .venue-imgs-block {
         display: block;
         width: 50%
     }
 
-    .venue-imgs>* {
+    .venue-imgs-block>* {
         display: block;
     }
 
@@ -528,11 +464,9 @@ button {
         width: 100%;
         margin: 0 auto;
     }
-
 }
 
 @media screen and (max-width: 1000px) {
-
     .venue-split>* {
         width: 100%;
     }
@@ -551,12 +485,7 @@ button {
     }
 }
 
-
-
-
 @media screen and (max-width: 768px) {
-
-    /* shortern nav */
     .full-width {
         width: 100%;
         text-align: center;
@@ -620,13 +549,6 @@ button {
         transform: translateY(-10px) rotate(-45deg);
     }
 }
-/* 
-@media screen and (min-width: 769px){
-    .nav-links{
-        opacity: 1;
-        height: 50px
-    }
-} */
 
 @media screen and (max-width: 650px) {
     .footer-flex {
@@ -652,40 +574,15 @@ button {
         padding: 15px;
     }
 
-
-
     .dashboard-button {
         width: 90%;
         margin: 0 auto;
         border-radius: 25px;
     }
-
-    /* .dashboard-button > a{
-        display: block;
-    } */
-
-    /* a > h6{
-        display: block;
-    } */
-
 }
 
-
-
 @media screen and (max-width: 575px) {
-    .skylark-imgs {
-        width: 250px;
-        height: 250px;
-        margin-bottom: 20px;
-    }
-
-    .skylark-imgs-2 {
-        width: 250px;
-        height: 250px;
-        margin-bottom: 20px;
-    }
-
-    .skylark-imgs-3 {
+    .imgs {
         width: 250px;
         height: 250px;
         margin-bottom: 20px;
@@ -717,11 +614,4 @@ button {
         width: 75%;
         margin: auto;
     }
-
-
-
 }
-
-
-
-/* nav bar */
