@@ -9,7 +9,6 @@ sequelize = new Sequelize(
     process.env.mysql_user, 
     process.env.mysql_password, 
     {
-        host: "localhost",
         dialect: 'mysql',
         port: 3306
     }
