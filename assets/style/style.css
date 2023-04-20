@@ -97,6 +97,20 @@ h6 {
     align-items: center;
 }
 
+button{
+    display: block;
+    color: white;
+    width: 75%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 25px;
+    transition: ease-in-out 0.2s;
+}
+
+button:hover{
+    border: white 3px solid;
+}
+
 /* INTRO PAGE--------------------------*/
 
 a {
@@ -272,10 +286,7 @@ nav {
 }
 
 
-.dashboard-button {
-    padding: 10px;
-    border-radius: 25px;
-}
+
 
 .timer-bar{
     margin: 15px 0;
@@ -403,30 +414,47 @@ footer {
 label,
 input {
     display: block;
-    margin-top: 10px;
-    width: 25%
+    margin-top: 5px;
+    width: 25%;
+    padding: 5px 0;
 }
 
-form>p {
+form{
+    width: 75%;
+    margin: 0 auto
+}
+
+label,form>p {
     font-family: copperplate
 }
 
-.attendance {
-    width: 25%
+.attendance>label{
+    display: inline;
+    width: 50%;
+    margin: 10px 0
 }
 
-.attendance>label,
-input {
+.attendance>input{
     display: inline;
 }
 
 .form-components {
-    font-family: 'monospace', monaco;
-    margin-top: 10px;
+    margin: 20px 0;
+
+}
+
+.form-components > label{
+    font-family: Raleway;
+    width: 100%
 }
 
 label {
     color: white
+}
+
+input[type="radio"]{
+    display: inline;
+    width: 20px;
 }
 
 /* Media Queries ------------------------- */
@@ -482,6 +510,11 @@ label {
     .video {
         width: 550px;
         height: 350px;
+    }
+
+    label,
+    input {
+    width: 100%;
     }
 }
 
@@ -573,12 +606,6 @@ label {
         width: 90%;
         padding: 15px;
     }
-
-    .dashboard-button {
-        width: 90%;
-        margin: 0 auto;
-        border-radius: 25px;
-    }
 }
 
 @media screen and (max-width: 575px) {
@@ -608,10 +635,5 @@ label {
 
     .intro-div>div {
         padding: 20px 5px 20px 5px;
-    }
-
-    .dashboard-button{
-        width: 75%;
-        margin: auto;
     }
 }
