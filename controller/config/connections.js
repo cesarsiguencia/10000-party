@@ -5,13 +5,13 @@ require('dotenv').config()
 let sequelize;
 
 if(process.env.CYCLIC_URL){
-    sequelize = new Sequelize(process.env.CYCLIC_DB, process.env.CYCLIC_APP_ID,process.env.CYCLIC_URL
+    sequelize = new Sequelize(process.env.CYCLIC_DB, process.env.CYCLIC_APP_ID,process.env.CYCLIC_URL,
         // , CYCLIC_BUCKET_NAME
-    //     {
-    //     dialect:  'mysql',
-    //     protocol: 'mysql',
-    //     logging:  true 
-    // }
+        {
+        dialect:  'mysql',
+        // protocol: 'mysql',
+        // logging:  true 
+    }
     ) 
 } else {
     sequelize = new Sequelize(
