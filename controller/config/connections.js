@@ -1,3 +1,4 @@
+const { config } = require('dotenv');
 const Sequelize = require('sequelize')
 
 require('dotenv').config()
@@ -8,9 +9,10 @@ if(process.env.CYCLIC_URL){
     sequelize = new Sequelize(process.env.CYCLIC_DB, process.env.CYCLIC_APP_ID,process.env.CYCLIC_URL,
         // , CYCLIC_BUCKET_NAME
         {
+        host: config.get(process.env.CYCLIC_URL),
         dialect:  'mysql'
         // protocol: 'mysql',
-        // logging:  true 
+        // logging:  truess
     }
     ) 
 } else {
