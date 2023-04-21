@@ -1,5 +1,7 @@
 const express = require('express')
 
+require('dotenv').config()
+
 const path = require('path')
 
 const sequelize = require ('./controller/config/connections')
@@ -12,7 +14,7 @@ const routes = require('./controller/routes')
 
 const app = express()
 
-const PORT = process.env.PORT || 3300
+const PORT = 4000 || process.env.PORT
 
 
 
@@ -29,7 +31,7 @@ app.use(routes)
 //     res.json('working file')
 // })
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync().then(() => {
     app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
 })
 
