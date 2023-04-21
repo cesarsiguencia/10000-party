@@ -16,13 +16,16 @@ let sequelize;
 // } else {
     sequelize = new Sequelize(
         // process.env.CYCLIC_URL,
-        process.env.mysql_database_name, 
-        process.env.mysql_user, 
-        process.env.mysql_password, 
+
         {
-            // host: 'localhost',
+             
+            username: process.env.mysql_user, 
+            password: process.env.mysql_password, 
+            database: process.env.mysql_database_name,
             dialect: 'mysql',
-            port: 3306
+            port: process.env.mysql_port,
+            host: process.env.mysql_port
+            
         }
     )
 // }
