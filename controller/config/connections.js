@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize')
 
 require('dotenv').config()
 
-let sequelize;
+
 
 // if(process.env.CYCLIC_URL){
 //     sequelize = new Sequelize(process.env.CYCLIC_DB, process.env.CYCLIC_APP_ID,process.env.CYCLIC_URL,
@@ -14,22 +14,15 @@ let sequelize;
 //     }
 //     ) 
 // } else {
-    sequelize = new Sequelize(
-        // process.env.CYCLIC_URL,
-
-        {
-             
-            username: process.env.mysql_user, 
-            password: process.env.mysql_password, 
-            database: process.env.mysql_database_name,
+const sequelize = new Sequelize(
+        {     
+            username: process.env.DB_USER, 
+            password: process.env.DB_PASSWORD, 
+            database: process.env.DB_NAME,
             dialect: 'mysql',
-            port: process.env.mysql_port,
-            host: process.env.mysql_port
-            
+            port: process.env.DB_PORT,
+            host: process.env.DB_HOST
         }
     )
-// }
-
-
 
 module.exports = sequelize
