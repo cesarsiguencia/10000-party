@@ -14,9 +14,7 @@ const routes = require('./controller/routes')
 
 const app = express()
 
-const PORT = 4000 || process.env.PORT
-
-
+const PORT = process.env.PORT || 4000
 
 app.use(express.static(path.join(__dirname, 'assets')))
 app.engine('handlebars', hbs.engine)
@@ -26,13 +24,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 app.use(routes)
 
-
-// app.get('/', (req, res) => {
-//     res.json('working file')
-// })
-
-sequelize.sync().then(() => {
+sequelize.sync({ force:false }).then(() => {
     app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
 })
-
-// app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
