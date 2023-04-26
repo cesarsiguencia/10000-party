@@ -89,34 +89,68 @@ function bringBarBack() {
 }
 
 var x = 1
+var y = 0
 
-function postsCarousel() {
+function timeCarousel() {
+    y = y + 0.5
+    timerProgress.style.width = `${y}%`
+
+    if (y == 100) {
+        y = 0
+        if (x == 1) {
+            posts.forEach((post) => {
+                post.style.transform = "translate(-100%)"
+            })
+            x = 2
+            return
+        }
     
+        if (x == 2) {
+            posts.forEach((post) => {
+                post.style.transform = "translate(-200%)"
+            })
+            x = 3
+            return
+        }
+    
+        if (x == 3) {
+            posts.forEach((post) => {
+                post.style.transform = "translate(0%)"
+            })
+            x = 1
+            return
+        }
 
-    if (x == 1) {
-        posts.forEach((post) => {
-            post.style.transform = "translate(-100%)"
-        })
-        x = 2
-        return
-    }
-
-    if (x == 2) {
-        posts.forEach((post) => {
-            post.style.transform = "translate(-200%)"
-        })
-        x = 3
-        return
-    }
-
-    if (x == 3) {
-        posts.forEach((post) => {
-            post.style.transform = "translate(0%)"
-        })
-        x = 1
-        return
     }
 }
+
+// function postsCarousel() {
+    
+
+//     if (x == 1) {
+//         posts.forEach((post) => {
+//             post.style.transform = "translate(-100%)"
+//         })
+//         x = 2
+//         return
+//     }
+
+//     if (x == 2) {
+//         posts.forEach((post) => {
+//             post.style.transform = "translate(-200%)"
+//         })
+//         x = 3
+//         return
+//     }
+
+//     if (x == 3) {
+//         posts.forEach((post) => {
+//             post.style.transform = "translate(0%)"
+//         })
+//         x = 1
+//         return
+//     }
+// }
 
 
 function smoothScroll(event) {
@@ -142,17 +176,6 @@ function scrollAdjuster() {
     selectedElement.style.opacity = 1
 }
 
-
-var y = 0
-
-function timeProgress() {
-    y = y + 0.5
-    timerProgress.style.width = `${y}%`
-
-    if (y == 100) {
-        y = 0
-    }
-}
  
 
 // Home Page Function calls
@@ -160,8 +183,6 @@ window.onload = homeParallax
 document.addEventListener("scroll", welcomeTitlesParallax)
 document.addEventListener("scroll", venueImgsParallax)
 header.addEventListener("click", hamburgerMenu)
-setInterval(postsCarousel, 8000)
-setInterval(timeProgress, 40)
+setInterval(timeCarousel, 40)
 navBar.addEventListener("click", smoothScroll)
 window.addEventListener("resize", bringBarBack)
-
