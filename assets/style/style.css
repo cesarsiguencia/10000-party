@@ -247,10 +247,16 @@ nav {
     font-size: 40px
 }
 
-.video {
-    display: block;
+.full-width{
     width: 800px;
     height: 500px;
+    margin: 0 auto;
+}
+
+.video {
+    display: block;
+    height: 100%;
+    margin: 0 auto
 }
 
 .dashboard {
@@ -507,10 +513,10 @@ input[type="radio"]{
         margin-bottom: 20px;
     }
 
-    .video {
-        width: 550px;
+    .full-width {
+        width: 500px;
         height: 350px;
-    }
+    } 
 
     label,
     input {
@@ -519,14 +525,11 @@ input[type="radio"]{
 }
 
 @media screen and (max-width: 768px) {
-    .full-width {
-        width: 100%;
-        text-align: center;
-        padding: 0
+    .intro-div {
+        width: 95%
     }
 
-    .video {
-        width: 400px;
+    .full-width {
         height: 300px;
     }
 
@@ -592,10 +595,9 @@ input[type="radio"]{
         text-align: center;
     }
 
-    .video {
-        width: 300px;
-        height: 200px;
-
+    .full-width {
+        width: 400px;
+        height: 300px;
     }
 
     section>div {
@@ -604,7 +606,11 @@ input[type="radio"]{
 
     .dashboard {
         width: 90%;
-        padding: 15px;
+        margin: 10px auto;
+    }
+    .dashboard > *{
+        width: 90%;
+        margin: 10px auto;
     }
 }
 
@@ -615,10 +621,8 @@ input[type="radio"]{
         margin-bottom: 20px;
     }
 
-    .video {
-        width: 250px;
-        height: 150px;
-        display: inline;
+    .full-width{
+        width: 100%;
     }
 
     .venue-info-blocks>iframe {
@@ -629,11 +633,11 @@ input[type="radio"]{
         width: 80%;
     }
 
-    .section-venue, #introduction{
+    .section-venue{
         padding: 20px 0;
     }
 
     .intro-div>div {
-        padding: 20px 5px 20px 5px;
+        padding: 20px 0px 20px 0px;
     }
 }

@@ -91,6 +91,8 @@ function bringBarBack() {
 var x = 1
 
 function postsCarousel() {
+    
+
     if (x == 1) {
         posts.forEach((post) => {
             post.style.transform = "translate(-100%)"
