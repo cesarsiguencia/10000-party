@@ -1,5 +1,9 @@
 {{>navbar }}
 
+{{#if loggedIn}}
+    {{>dashboard}}
+
+{{else}}
 <div class="body">
     <section class="form-page">
 
@@ -7,7 +11,7 @@
 
         <form id="form-registration">
             <div class="form-components">
-                <label for="form-first-name">First Name</label>
+                <label for="form_first_name">First Name</label>
                 <input type="text" placeholder="First Name" name="form_first_name" id="form-first-name" />
             </div>
 
@@ -17,23 +21,23 @@
             </div>
 
             <div class="form-components">
-                <label for="form-confirm-age">I am at least 21 years old and am aware I must bring a government issued
+                <label for="form_confirm_age">I am at least 21 years old and am aware I must bring a government issued
                     ID to the venue on the day of the event.</label>
                 <input type="radio" name="age-consent" id="form-confirm-age" />
             </div>
 
             <div class="form-components">
-                <label for="form-email">Enter your email</label>
+                <label for="form_email">Enter your email</label>
                 <input type="email" placeholder="Email" name="email" id="form-email" />
             </div>
 
             <div class="form-components">
-                <label for="form_last_name">Username</label>
+                <label for="form_username">Username</label>
                 <input type="text" placeholder="Last Name" name="last-name" id="form-username" />
             </div>
 
             <div class="form-components">
-                <label for="form_last_name">Password</label>
+                <label for="form_password">Password</label>
                 <input type="text" placeholder="Last Name" name="last-name" id="form-password" />
             </div>
 
@@ -101,3 +105,5 @@
 </div>
 
 <script src="/script/register.js"></script> 
+
+{{/if}}

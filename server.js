@@ -1,6 +1,6 @@
 const express = require('express')
 
-require('dotenv').config()
+
 
 const path = require('path')
 
@@ -16,6 +16,20 @@ const app = express()
 
 const PORT = process.env.PORT || 4000
 
+const session = require('express-session')
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const sess = {
+    secret:'super secret password',
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+        db: sequelize
+    })
+
+}
+
+app.use(session(sess))
 app.use(express.static(path.join(__dirname, 'assets')))
 app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')

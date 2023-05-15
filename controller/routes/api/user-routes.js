@@ -38,6 +38,11 @@ router.post('/', (req, res) => {
         password: req.body.password
     })
         .then((newUser => {
+            req.session.save(()=>{
+                req.session.user_id = newUser.id;
+                req.session.username = newUser.username;
+                req.session.loggedIn = true 
+            })
             res.json(newUser)
             console.log(newUser)
         }))

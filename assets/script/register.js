@@ -15,11 +15,11 @@ function removeModal(){
 async function signUpFormHandler(event){
     event.preventDefault()
 
-    const firstName = document.querySelector('#form-first-name')
-    const lastName = document.querySelector('#form-first-name')
-    const email = document.querySelector('#form-email')
-    const username = document.querySelector('#form-username')
-    const password = document.querySelector('#form-password')
+    const firstName = document.querySelector('#form-first-name').value.trim();
+    const lastName = document.querySelector('#form-first-name').value.trim();
+    const email = document.querySelector('#form-email').value.trim();
+    const username = document.querySelector('#form-username').value.trim();
+    const password = document.querySelector('#form-password').value.trim();
 
     if(firstName && lastName && email && username && password){
         const response = await fetch('api/users', {

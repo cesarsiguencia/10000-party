@@ -34,14 +34,22 @@ User.init(
             }
         },
         password: {
-            type: DataTypes.STRING(64),
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [8],
-                is: /^[0-9a-f]{64}$/i
-                
+                len: [8]
             }
         }
+        // ,
+        // password: {
+        //     type: DataTypes.STRING(64),
+        //     allowNull: false,
+        //     validate: {
+        //         len: [8],
+        //         is: /^[0-9a-f]{64}$/i
+                
+        //     }
+        // }
     },
     {
         sequelize,
