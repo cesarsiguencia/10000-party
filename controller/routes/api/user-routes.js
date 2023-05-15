@@ -29,10 +29,10 @@ router.get('/:id', (req,res) => {
     })
 })
 
-router.post('./register', (req, res){
+router.post('/', (req, res) => {
     User.create({
-        first_name: req.body.form_first_name,
-        last_name: req.body.form_last_name,
+        first_name: req.body.firstName,
+        last_name: req.body.lastName,
         username: req.body.username,
         email: req.body.email,
         password: req.body.password
