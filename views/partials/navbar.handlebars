@@ -17,11 +17,15 @@
             <a class="nav-links" id="#venue" href="/home#venue">
                 <div class="nav-links-selected" id="#venue">The Venue</div>
             </a>
-            <a class="nav-links">
-                <div class="nav-links-selected" id="modal">My Stuff</div>
+            <a class="nav-links" id="modal">
+                <div class="nav-links-selected">My Stuff</div>
             </a>
             <a class="nav-links highlighted-options" href="/register">
-                <div class="nav-links-selected"id="#signUp">Reserve Your Slot</div>
+                {{#if loggedIn}}
+                    <div class="nav-links-selected"id="#signUp">Log Out</div>
+                {{else}}
+                    <div class="nav-links-selected"id="#signUp">Reserve Your Slot</div>
+                {{/if}}
             </a>
         </nav>
      

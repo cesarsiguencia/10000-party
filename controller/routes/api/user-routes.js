@@ -29,4 +29,18 @@ router.get('/:id', (req,res) => {
     })
 })
 
+router.post('./register', (req, res){
+    User.create({
+        first_name: req.body.form_first_name,
+        last_name: req.body.form_last_name,
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
+    })
+        .then((newUser => {
+            res.json(newUser)
+            console.log(newUser)
+        }))
+})
+
 module.exports = router;
