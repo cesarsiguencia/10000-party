@@ -170,27 +170,27 @@ function timeCarousel() {
 // }
 
 
-// function smoothScroll(event) {
-//     barHeight = navBar.clientHeight;
+function smoothScroll(event) {
+    barHeight = navBar.clientHeight;
 
-//     var section = event.target.id
-//     selectedElement = document.querySelector(`${section}`)
-//     selectedElement.style.opacity = 0
-//     selectedElement.scrollIntoView({
-//         block: 'start',
-//         behavior: 'smooth',
+    var section = event.target.id
+    selectedElement = document.querySelector(`${section}`)
+    selectedElement.style.opacity = 0
+    selectedElement.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
 
-//     });
-//     setTimeout(scrollAdjuster, 800)
-// }
+    });
+    selectedElement.style.transition = "2s"
+    selectedElement.style.opacity = 1
+    // setTimeout(scrollAdjuster, 800)
+}
 
 // function scrollAdjuster() {
 //     window.scrollBy({
 //         behavior: 'smooth',
 //         top: -`${barHeight + 20}`
 //     })
-//     selectedElement.style.transition = "2s"
-//     selectedElement.style.opacity = 1
 // }
 
 function loadModal(){
@@ -211,7 +211,7 @@ document.addEventListener("scroll", welcomeTitlesParallax)
 document.addEventListener("scroll", venueImgsParallax)
 header.addEventListener("click", hamburgerMenu)
 setInterval(timeCarousel, 40)
-// navBar.addEventListener("click", smoothScroll)
+navBar.addEventListener("click", smoothScroll)
 window.addEventListener("resize", bringBarBack)
 modalSelected.addEventListener("click",loadModal)
 closeModalButton.addEventListener("click", removeModal)
