@@ -50,7 +50,14 @@ function introParallax(event) {
     }
 }
 
+function homeParallax(event) {
+    const hero = document.querySelector(".hero")
+    hero.style.height = "120vh";
+    event.target.scrollingElement.scrollTop = 0
+}
+
 // Intro Page Function calls
+window.onload = homeParallax
 document.addEventListener("scroll", introParallax);
 setTimeout(changeWords, 1000, 0)
 setTimeout("insertHomeBtn()", 1000)

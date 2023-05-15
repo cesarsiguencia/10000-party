@@ -6,13 +6,30 @@ var timerProgress = document.querySelector(".timer-progress")
 var dashboard = document.querySelector('.dashboard-carousel')
 var barHeight = ""
 var selectedElement = ""
+var modalSelected = document.querySelector('#modal')
+var loginModal = document.querySelector('#login-modal')
+var closeModalButton = document.querySelector('#modal-close')
 
+function introParallax(event) {
+    const hero = document.querySelector(".hero")
+    const scrollPosition = event.target.scrollingElement.scrollTop;
+
+    if (scrollPosition > 20) {
+        hero.style.height = "100vh";
+    } else {
+
+        hero.style.height = "120vh";
+    }
+}
 
 function homeParallax(event) {
+    barHeight = navBar.clientHeight;
     const hero = document.querySelector(".hero")
     hero.style.height = "120vh";
-    event.target.scrollingElement.scrollTop = 0
 
+    if(barHeight < 20){
+        event.target.scrollingElement.scrollTop = 0
+    }
 }
 
 function welcomeTitlesParallax(event) {
@@ -153,36 +170,48 @@ function timeCarousel() {
 // }
 
 
-function smoothScroll(event) {
-    barHeight = navBar.clientHeight;
+// function smoothScroll(event) {
+//     barHeight = navBar.clientHeight;
 
-    var section = event.target.id
-    selectedElement = document.querySelector(`${section}`)
-    selectedElement.style.opacity = 0
-    selectedElement.scrollIntoView({
-        block: 'start',
-        behavior: 'smooth',
+//     var section = event.target.id
+//     selectedElement = document.querySelector(`${section}`)
+//     selectedElement.style.opacity = 0
+//     selectedElement.scrollIntoView({
+//         block: 'start',
+//         behavior: 'smooth',
 
-    });
-    setTimeout(scrollAdjuster, 800)
+//     });
+//     setTimeout(scrollAdjuster, 800)
+// }
+
+// function scrollAdjuster() {
+//     window.scrollBy({
+//         behavior: 'smooth',
+//         top: -`${barHeight + 20}`
+//     })
+//     selectedElement.style.transition = "2s"
+//     selectedElement.style.opacity = 1
+// }
+
+function loadModal(){
+    loginModal.style.height = "100vh"
 }
 
-function scrollAdjuster() {
-    window.scrollBy({
-        behavior: 'smooth',
-        top: -`${barHeight + 20}`
-    })
-    selectedElement.style.transition = "2s"
-    selectedElement.style.opacity = 1
+function removeModal(){
+    loginModal.style.height = "0px"
 }
-
  
 
+
 // Home Page Function calls
+
 window.onload = homeParallax
+document.addEventListener("scroll", introParallax);
 document.addEventListener("scroll", welcomeTitlesParallax)
 document.addEventListener("scroll", venueImgsParallax)
 header.addEventListener("click", hamburgerMenu)
 setInterval(timeCarousel, 40)
-navBar.addEventListener("click", smoothScroll)
+// navBar.addEventListener("click", smoothScroll)
 window.addEventListener("resize", bringBarBack)
+modalSelected.addEventListener("click",loadModal)
+closeModalButton.addEventListener("click", removeModal)

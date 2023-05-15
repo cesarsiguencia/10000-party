@@ -427,7 +427,7 @@ input {
 
 form{
     width: 75%;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 label,form>p {
@@ -462,6 +462,34 @@ input[type="radio"]{
     display: inline;
     width: 20px;
 }
+
+.form-page{
+    height: 88vh
+}
+
+/* Login In Partial */
+
+.login-modal{
+    background: rgba(0, 0, 0, 0.9);
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1;
+    height: 0px;
+}
+
+.login-container{
+	border-radius: 5px;
+	max-width: 100%;
+	margin: 50px auto;
+	padding: 15px;
+	width: 960px;
+}
+
+
 
 /* Media Queries ------------------------- */
 
