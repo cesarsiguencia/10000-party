@@ -16,8 +16,8 @@ router.get('/', (req,res) => {
                 plain:true
             }));
             res.render('homepage', {
-                posts
-                // loggedIn: req.session.loggedIn
+                posts,
+                loggedIn: req.session.loggedIn
             })
         })
             

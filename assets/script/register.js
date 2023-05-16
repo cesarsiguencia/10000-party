@@ -35,7 +35,7 @@ async function signUpFormHandler(event){
         })
 
         if(response.ok){
-            console.log('fetch successful')
+            document.location.replace('/dashboard')
         } else {
             alert(response.statusText)
         }

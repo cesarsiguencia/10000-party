@@ -42,10 +42,22 @@ router.post('/', (req, res) => {
                 req.session.user_id = newUser.id;
                 req.session.username = newUser.username;
                 req.session.loggedIn = true 
+                res.json(newUser)
+                console.log(newUser)
+                console.log(req.session.loggedIn, ' =session from me')
             })
-            res.json(newUser)
-            console.log(newUser)
+
         }))
+})
+
+router.post('/logout', (req,res) => {
+    if(req.session.loggedIn){
+        req.session.destroy(() => {
+            res.status(204).end()
+        })
+    } else {
+        res.status(404).end
+    }
 })
 
 module.exports = router;

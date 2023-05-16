@@ -1,32 +1,47 @@
 <header id="mobileMenu">
-                <div class="mobile-toggle" id="mobile-menu">
-                    <div class="mobile-options"></div>
-                    <div class="mobile-options"></div>
-                    <div class="mobile-options"></div>
-          </div>
-        <nav id="nav">
+    <div class="mobile-toggle" id="mobile-menu">
+        <div class="mobile-options"></div>
+        <div class="mobile-options"></div>
+        <div class="mobile-options"></div>
+    </div>
+    <nav id="nav">
+        <a class="nav-links" id="#introduction" href="/home#introduction">
+            <div class="nav-links-selected" id="#introduction">Introduction</div>
+        </a>
+        <a class="nav-links" id="#story" href="/home#story">
+            <div class="nav-links-selected" id="#story">Story Time</div>
 
-          
-            <a class="nav-links" id="#introduction" href="/home#introduction">
-                <div class="nav-links-selected" id="#introduction" >Introduction</div>
-            </a>
-            <a class="nav-links" id="#story" href="/home#story">
-                <div class="nav-links-selected" id="#story">Story Time</div>
+        </a>
+        <a class="nav-links" id="#venue" href="/home#venue">
+            <div class="nav-links-selected" id="#venue">The Venue</div>
+        </a>
 
-            </a>
-            <a class="nav-links" id="#venue" href="/home#venue">
-                <div class="nav-links-selected" id="#venue">The Venue</div>
-            </a>
-            <a class="nav-links" id="modal">
-                <div class="nav-links-selected">My Stuff</div>
-            </a>
-            <a class="nav-links highlighted-options" href="/register">
-                {{#if loggedIn}}
-                    <div class="nav-links-selected"id="#signUp">Log Out</div>
-                {{else}}
-                    <div class="nav-links-selected"id="#signUp">Reserve Your Slot</div>
-                {{/if}}
-            </a>
-        </nav>
-     
+        {{#if loggedIn}}
+        <a class="nav-links" href="/dashboard">
+            <div class="nav-links-selected">My Stuff</div>
+        </a>
+
+
+        <a class="nav-links highlighted-options" id="logout-button">
+            <div class="nav-links-selected">Log Out</div>
+        </a>
+
+        {{else}}
+
+        <a class="nav-links" id="modal">
+            <div class="nav-links-selected">My Stuff</div>
+        </a>
+        <a class="nav-links highlighted-options" href="/register">
+            <div class="nav-links-selected" id="#signUp">Reserve Your Slot</div>
+        </a>
+        {{/if}}
+
+    </nav>
 </header>
+
+{{#if loggedIn}}
+
+<script src="/script/logout.js"></script>
+
+{{/if}}
+
