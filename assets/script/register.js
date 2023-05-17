@@ -35,6 +35,7 @@ async function signUpFormHandler(event){
         })
 
         if(response.ok){
+            console.log('page should reload')
             document.location.replace('/dashboard')
         } else {
             alert(response.statusText)

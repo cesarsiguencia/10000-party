@@ -50,6 +50,34 @@ router.post('/', (req, res) => {
         }))
 })
 
+router.post('/login', (req,res) => {
+    console.log(req.body)
+    User.findOne({
+        where: {
+            email: req.body.loginEmail
+        }
+            
+    }).then(loggedUser => {
+        if(!loggedUser){
+            res.status(400).json({ message: 'No user found with this email'});
+            return;
+        }
+
+        // const passwordCheck = loggedUser.checkPassword(req.body.loginPassword)
+
+        // if(!passwordCheck){
+        //     res.status(400).json({ message: 'Incorrect password'})
+        // }
+
+        req.session.save(()=>{
+            req.session.user_id = loggedUser.id,
+            req.session.username = loggedUser.username,
+            req.session.loggedIn = true
+            res.json({ user: loggedUser, message: 'Logged In'})
+        })
+    })
+})
+
 router.post('/logout', (req,res) => {
     if(req.session.loggedIn){
         req.session.destroy(() => {

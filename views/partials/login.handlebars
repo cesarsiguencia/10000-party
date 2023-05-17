@@ -3,13 +3,20 @@
         <h2 class="intro-title">Login In</h2>
         <div class="form-components">
             <label for="form-email">Email</label>
-            <input type="text" placeholder="Last Name" name="last-name" id="form-last-name" />
+            <input type="email" placeholder="Enter email" name="email" id="login-email" />
         </div>
 
         <div class="form-components">
-            <label for="form-password">Last Name</label>
-            <input type="text" placeholder="Last Name" name="last-name" id="form-last-name" />
+            <label for="form-password">Password</label>
+            <input type="password" placeholder="Enter password" name="password" id="login-password" />
         </div>
+
+        <button class="highlighted-options text-center margin-center" id="login-submit">
+            <h6>
+                Login
+            </h6>
+        </button>
+
         <p>If you have not signed up yet, please click <a href="/register">HERE</a></p>
         <br />
         <button class="highlighted-options text-center margin-center" id="modal-close">
@@ -19,3 +26,5 @@
         </button>
     </div>
 </div>
+
+<script src="script/login.js"></script>
