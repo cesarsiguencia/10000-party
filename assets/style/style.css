@@ -469,7 +469,7 @@ input[type="radio"]{
 
 /* Login In Partial */
 
-.login-modal{
+.modal{
     background: rgba(0, 0, 0, 0.9);
 	bottom: 0;
 	left: 0;

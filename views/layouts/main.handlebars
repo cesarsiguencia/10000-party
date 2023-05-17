@@ -37,9 +37,14 @@
 
 <body>
     {{#if loggedIn}}
+
     {{>dashboard}}
+
+    {{else}}
+    {{>login-modal}}
     {{/if}}
-    {{>login}}
+        {{>logout-modal}}
+
     {{{body}}}
 
 
@@ -56,11 +61,7 @@
 
     </footer>
 
-    {{#if loggedIn}}
-
-    <script src="/script/logout.js"></script>
-
-    {{/if}}
+<script src="script/modal.js"></script>
     
 </body>
 

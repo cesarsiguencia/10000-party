@@ -7,7 +7,8 @@ var dashboard = document.querySelector('.dashboard-carousel')
 var barHeight = ""
 var selectedElement = ""
 var modalSelected = document.querySelector('#modal')
-var loginModal = document.querySelector('#login-modal')
+// var loginModal = document.querySelector('#login-modal')
+// var logoutModal = document.querySelector('#logout-modal')
 var closeModalButton = document.querySelector('#modal-close')
 
 function introParallax(event) {
@@ -194,11 +195,11 @@ function smoothScroll(event) {
 // }
 
 function loadModal(){
-    loginModal.style.height = "100vh"
+    modal.style.height = "100vh"
 }
 
 function removeModal(){
-    loginModal.style.height = "0px"
+    modal.style.height = "0px"
 }
  
 

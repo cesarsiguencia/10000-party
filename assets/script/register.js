@@ -1,16 +1,4 @@
-var modalSelected = document.querySelector('#modal')
-var loginModal = document.querySelector('#login-modal')
-var closeModalButton = document.querySelector('#modal-close')
 var signUpForm = document.querySelector('#form-registration')
-
-function loadModal(){
-    loginModal.style.height = "100vh"
-}
-
-function removeModal(){
-    loginModal.style.height = "0px"
-}
-
 
 async function signUpFormHandler(event){
     event.preventDefault()
@@ -35,7 +23,6 @@ async function signUpFormHandler(event){
         })
 
         if(response.ok){
-            console.log('page should reload')
             document.location.replace('/dashboard')
         } else {
             alert(response.statusText)
@@ -45,6 +32,5 @@ async function signUpFormHandler(event){
 
 
 
-modalSelected.addEventListener("click",loadModal)
-closeModalButton.addEventListener("click", removeModal)
+
 signUpForm.addEventListener("submit", signUpFormHandler)

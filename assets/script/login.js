@@ -14,10 +14,8 @@ async function login(){
             }),
             headers:{'Content-Type':'application/json'}
         })
-        console.log('returned object?')
 
         if(response.ok){
-            console.log('page should reload')
             document.location.replace('/dashboard')
         } else {
             alert(response.statusText)
