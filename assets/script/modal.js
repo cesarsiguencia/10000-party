@@ -1,24 +1,12 @@
-var modalLoginNav = document.querySelector('#modal-login')
-var modalLogoutNav = document.querySelector('#logout-button')
-var modal = document.querySelector('.modal')
+// var loginModal = document.querySelector('#login-modal')
 
-var logoutModal = document.querySelector('#logout-modal')
-
-var closeModalButton = document.querySelector('#modal-close')
-
-
-function loadModal(){
-    console.log('WORKING!!')
-    modal.style.height = "100vh"
-}
-
-function removeModal(){
-    console.log('ME TOOOO')
-    modal.style.height = "0px"
-}
+// var modal = document.querySelector('.modal')
 
 
 
-modalLoginNav.addEventListener("click",loadModal)
-modalLogoutNav.addEventListener("click",loadModal)
-closeModalButton.addEventListener("click", removeModal)
+// function loadModal(){
+//     console.log('WORKING!!')
+//     modal.style.height = "100vh"
+// }
+
+// loginModal.addEventListener("click",loadModal)

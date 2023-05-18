@@ -61,7 +61,11 @@
 
     </footer>
 
-<script src="script/modal.js"></script>
+    {{#if loggedIn}}
+    <script src="script/logout.js"></script>
+    {{else}}
+    <script src="script/login.js"></script>
+    {{/if}}
     
 </body>
 
