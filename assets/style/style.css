@@ -398,12 +398,8 @@ nav {
     color: white
 }
 
-.personal-info {
-    box-sizing: border-box;
-}
-
 .textbox {
-    padding: 10px;
+    padding: 10px 0px 10px 0px;
     margin: 10px auto;
     display: block;
     width: 100%
@@ -439,14 +435,11 @@ form{
     margin: 0 auto;
 }
 
-label {
-    font-family: copperplate
-}
-
 .attendance>label{
     display: inline;
     width: 50%;
-    margin: 10px 0
+    margin: 10px 0;
+    font-family: copperplate
 }
 
 .attendance>input{
@@ -455,7 +448,6 @@ label {
 
 .form-components {
     margin: 20px 0;
-
 }
 
 .form-components > label{
@@ -470,10 +462,6 @@ label {
 input[type="radio"]{
     display: inline;
     width: 20px;
-}
-
-.form-page{
-    height: 88vh
 }
 
 /* Login In Partial */
@@ -492,10 +480,10 @@ input[type="radio"]{
 
 .login-container{
 	border-radius: 5px;
-	max-width: 100%;
+	/* max-width: 100%; */
 	margin: 50px auto;
 	padding: 15px;
-	width: 960px;
+	/* width: 960px; */
 }
 
 
@@ -666,9 +654,7 @@ input[type="radio"]{
         height: 200px;
     }
 
-    .textbox {
-        width: 80%;
-    }
+
 
     .section-venue{
         padding: 20px 0;
