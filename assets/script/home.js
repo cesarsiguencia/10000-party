@@ -6,10 +6,7 @@ var timerProgress = document.querySelector(".timer-progress")
 var dashboard = document.querySelector('.dashboard-carousel')
 var barHeight = ""
 var selectedElement = ""
-var modalSelected = document.querySelector('#modal')
-// var loginModal = document.querySelector('#login-modal')
-// var logoutModal = document.querySelector('#logout-modal')
-var closeModalButton = document.querySelector('#modal-close')
+var dummyForm = document.querySelector('.registration')
 
 function introParallax(event) {
     const hero = document.querySelector(".hero")
@@ -194,15 +191,6 @@ function smoothScroll(event) {
 //     })
 // }
 
-function loadModal(){
-    modal.style.height = "100vh"
-}
-
-function removeModal(){
-    modal.style.height = "0px"
-}
- 
-
 
 // Home Page Function calls
 
@@ -214,5 +202,6 @@ header.addEventListener("click", hamburgerMenu)
 setInterval(timeCarousel, 40)
 navBar.addEventListener("click", smoothScroll)
 window.addEventListener("resize", bringBarBack)
-modalSelected.addEventListener("click",loadModal)
-closeModalButton.addEventListener("click", removeModal)
+dummyForm.addEventListener('click', function(){
+    document.location.replace('/register')
+})

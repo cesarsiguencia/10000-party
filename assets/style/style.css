@@ -383,6 +383,15 @@ nav {
 
 /* Section Sign Up */
 
+.registration{
+    opacity: 0.2;
+}
+
+.registration:hover{
+    transition: ease-in-out 1s;
+    opacity: 1
+}
+
 .form-info>label {
     font-family: copperplate;
     font-size: 25px;
