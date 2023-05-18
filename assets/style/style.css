@@ -17,12 +17,6 @@
 
 /* Global-------------------------*/
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
 section:nth-child(odd) {
     background-color: var(--third-color)
 }
@@ -110,6 +104,30 @@ button{
 button:hover{
     border: white 3px solid;
 }
+
+.textbox {
+    padding: 10px 0px 10px 0px;
+    margin: 10px auto;
+    display: block;
+    width: 100%
+}
+
+form{
+    width: 75%;
+    margin: 0 auto;
+}
+
+label {
+    font-family: Raleway;
+    color: white;
+    width: 100%
+}
+
+input[type="radio"]{
+    display: inline;
+    width: 20px;
+}
+
 
 /* INTRO PAGE--------------------------*/
 
@@ -291,9 +309,6 @@ nav {
     font-style: italic;
 }
 
-
-
-
 .timer-bar{
     margin: 15px 0;
     height: 5px;
@@ -384,25 +399,12 @@ nav {
 /* Section Sign Up */
 
 .registration{
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 .registration:hover{
-    transition: ease-in-out 1s;
+    transition: ease-in-out 0.5s;
     opacity: 1
-}
-
-.form-info>label {
-    font-family: copperplate;
-    font-size: 25px;
-    color: white
-}
-
-.textbox {
-    padding: 10px 0px 10px 0px;
-    margin: 10px auto;
-    display: block;
-    width: 100%
 }
 
 /* Footer */
@@ -422,71 +424,39 @@ footer {
 /* FORM PAGE --------------------------*/
 /* Fill Out Form */
 
-label,
-input {
-    display: block;
-    margin-top: 5px;
-    width: 25%;
-    padding: 5px 0;
-}
-
-form{
-    width: 75%;
-    margin: 0 auto;
+.form-components {
+    margin: 20px 0;
 }
 
 .attendance>label{
     display: inline;
     width: 50%;
     margin: 10px 0;
-    font-family: copperplate
 }
 
 .attendance>input{
     display: inline;
 }
 
-.form-components {
-    margin: 20px 0;
-}
-
-.form-components > label{
-    font-family: Raleway;
-    width: 100%
-}
-
-label {
-    color: white
-}
-
-input[type="radio"]{
-    display: inline;
-    width: 20px;
-}
-
 /* Login In Partial */
 
 .modal{
     background: rgba(0, 0, 0, 0.9);
+    right: 0;
+	top: 0;
 	bottom: 0;
 	left: 0;
 	overflow: auto;
 	position: fixed;
-	right: 0;
-	top: 0;
 	z-index: 1;
     height: 0px;
 }
 
 .login-container{
 	border-radius: 5px;
-	/* max-width: 100%; */
 	margin: 50px auto;
 	padding: 15px;
-	/* width: 960px; */
 }
-
-
 
 /* Media Queries ------------------------- */
 
@@ -653,8 +623,6 @@ input[type="radio"]{
     .venue-info-blocks>iframe {
         height: 200px;
     }
-
-
 
     .section-venue{
         padding: 20px 0;
