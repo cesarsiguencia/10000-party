@@ -98,7 +98,9 @@ button{
     margin: 0 auto;
     padding: 10px;
     border-radius: 25px;
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 1s;
+    scale: 1;
+    border: black 3px solid;
 }
 
 button:hover{
@@ -324,9 +326,13 @@ nav {
 }
 
 .equation {
+    width:50%;
+    margin: 0 auto;
     padding: 20px 0;
     border-radius: 25px;
     background-color: var(--fourth-color);
+    transition: ease-in-out 1s;
+    scale: 0.75
 }
 
 .equation>h2 {
@@ -347,6 +353,10 @@ nav {
     font-size: 35px;
 }
 
+.about-story{
+    transition: ease-in-out 1s;
+}
+
 /* Skylark Section Venue */
 
 .venue-imgs-block{
@@ -358,26 +368,38 @@ nav {
     display: block;
     width: 400px;
     height: 400px;
-    transition: ease-in-out 1.5s;
+    transition: ease-in-out 1s;
     border: 5px solid var(--fourth-color)
 }
 
 .skylark-img {
-    background-image: url('../media/lounge.png');
-    background-size: 210%;
-    background-position-x: 50%;
+    background-image: url('../media/lounge.png');   
+    background-size: 100%
+
 }
 
 .skylark-img-2 {
     background-image: url('../media/lounge-2.png');
-    background-size: 180%;
-    background-position-x: 30%;
+    background-size: 100%
+
 }
 
 .skylark-img-3 {
     background-image: url('../media/lounge-3.png');
-    background-size: 180%;
-    background-position-x: 30%;
+    background-size: 100%
+
+}
+
+.skylark-img:hover{
+    scale: 1.1
+}
+
+.skylark-img-2:hover{
+    scale: 1.1
+}
+
+.skylark-img-3:hover{
+    scale: 1.1
 }
 
 .venue-info {

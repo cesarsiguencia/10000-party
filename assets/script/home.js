@@ -38,90 +38,78 @@ function welcomeTitlesParallax(event) {
 }
 
 
-function venueImgsParallax(event) {
+function venueImgsParallax() {
     const skylark1 = document.querySelector(".skylark-img")
     const skylark2 = document.querySelector(".skylark-img-2")
     const skylark3 = document.querySelector(".skylark-img-3")
-    const scrollPosition = event.target.scrollingElement.scrollTop;
-    if (scrollPosition > 2000) {
-        skylark1.style.backgroundSize = "230%"
-        skylark2.style.backgroundSize = "200%"
-        skylark3.style.backgroundSize = "200%"
+    const venueBox = document.querySelector(".venue-split")
+
+    const imgsArray = [skylark1, skylark2, skylark3] 
+    const position = venueBox.getBoundingClientRect()
+
+    if (position.top >= window.innerHeight ) {
+
+        imgsArray.forEach((image)=>{
+            image.style.backgroundSize = "110%"
+        })
     } else {
-        skylark1.style.backgroundSize = "210%"
-        skylark2.style.backgroundSize = "180%"
-        skylark3.style.backgroundSize = "180%"
+        imgsArray.forEach((image)=>{
+            image.style.backgroundSize = "100%"
+        })
     }
 }
 
-var x = 1
-var y = 0
-
-function timeCarousel() {
-    y = y + 0.5
-    timerProgress.style.width = `${y}%`
-
-    if (y == 100) {
-        y = 0
-        if (x == 1) {
-            posts.forEach((post) => {
-                post.style.transform = "translate(-100%)"
-            })
-            x = 2
-            return
-        }
-    
-        if (x == 2) {
-            posts.forEach((post) => {
-                post.style.transform = "translate(-200%)"
-            })
-            x = 3
-            return
-        }
-    
-        if (x == 3) {
-            posts.forEach((post) => {
-                post.style.transform = "translate(0%)"
-            })
-            x = 1
-            return
-        }
-
+function equationParallax() {
+    const equationDiv = document.querySelector(".equation")
+    const position = equationDiv.getBoundingClientRect()
+    if (position.top >= 0 && position.bottom <= window.innerHeight) {
+        equationDiv.style.scale = 1
+    } else {
+        equationDiv.style.scale = 0.75
     }
 }
 
-// function smoothScroll(event) {
-//     // barHeight = navBar.clientHeight;
+function storyParallax() {
+    const storyDiv = document.querySelector(".about-story")
+    const position = storyDiv.getBoundingClientRect()
+    if (position.top <= window.innerHeight) {
+        storyDiv.style.scale = 1
+        storyDiv.style.opacity = 1
+    } else {
+        storyDiv.style.scale = 0.75
+        storyDiv.style.opacity = 0.2
+    }
+}
 
-//     var section = event.target.id
+var buttons = document.querySelectorAll('button')
 
-//     selectedElement = document.querySelector(`${section}`)
-//     selectedElement.style.opacity = 0
-//     selectedElement.scrollIntoView({
-//         block: 'start',
-//         behavior: 'smooth',
+function buttonScale (){
+    setInterval(() => {
+        buttons.forEach((single)=>{
+            single.style.scale = 1.1
+        })
+    }, 2000);
 
-//     });
-//     selectedElement.style.transition = "2s"
-//     selectedElement.style.opacity = 1
-//     // setTimeout(scrollAdjuster, 800)
-// }
+    setTimeout(buttonDown, 1000)
+}
 
-// function scrollAdjuster() {
-//     window.scrollBy({
-//         behavior: 'smooth',
-//         top: -`${barHeight + 20}`
-//     })
-// }
+function buttonDown (){
+    
+    setInterval(() => {
+        buttons.forEach((single)=>{
+            single.style.scale = 1.0
+        })
+    }, 2000);
+}
 
 
 // Home Page Function calls
 window.onload = loadParallax
+window.onload = buttonScale
 document.addEventListener("scroll", homeParallax);
 document.addEventListener("scroll", welcomeTitlesParallax)
 document.addEventListener("scroll", venueImgsParallax)
-setInterval(timeCarousel, 40)
-// navBar.addEventListener("click", smoothScroll)
-dummyForm.addEventListener('click', function(){
-    document.location.replace('/register')
-})
+document.addEventListener("scroll", equationParallax)
+document.addEventListener("scroll", storyParallax)
+
+

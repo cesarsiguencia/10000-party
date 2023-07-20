@@ -19,7 +19,6 @@ function changeWords(currentIndex) {
     } else {
         return
     }
-
     nextIndex = currentIndex
     setTimeout(changeWords, 4000, nextIndex)
 }
@@ -33,7 +32,7 @@ function insertHomeBtn() {
 
 function appearButton() {
     var button = document.querySelector(".welcome-button")
-    button.setAttribute("href", "/home")
+    button.setAttribute("href", "homepage.html")
     button.style.opacity = 1
 }
 
