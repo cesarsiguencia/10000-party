@@ -28,7 +28,7 @@ function insertHomeBtn() {
     var buttonItem = document.createElement("a")
     
     buttonItem.className = 'welcome-button'
-    buttonItem.innerHTML = '<p class="welcome-button-font text-center copperplate-font">Click here for awesomeness</p> '
+    buttonItem.innerHTML = '<p class="welcome-button-font text-center copperplate-font">Click here for audio and awesomeness</p> '
     welcomeBox.appendChild(buttonItem)
 }
 
