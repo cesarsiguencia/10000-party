@@ -87,8 +87,6 @@ function playToBeReal(){
     } 
 }
 
-var setAlbums = falses
-
 function playSinCara(){
     const audioSinCara = document.querySelector('#bottom-audio')
     const footerTime = document.querySelector('#signUp')
