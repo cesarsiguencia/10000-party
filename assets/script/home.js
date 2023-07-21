@@ -87,27 +87,27 @@ function equationParallax() {
 //     } 
 // }
 
-function playSinCara(){
-    const audioSinCara = document.querySelector('#bottom-audio')
-    const footerTime = document.querySelector('#signUp')
-    const venueTime = document.querySelector('#albums')
-    const positionFooter= footerTime.getBoundingClientRect()
-    const positionVenue = venueTime.getBoundingClientRect()
-    audioSinCara.pause()
-    audioSinCara.volume = 0
+// function playSinCara(){
+//     const audioSinCara = document.querySelector('#bottom-audio')
+//     const footerTime = document.querySelector('#signUp')
+//     const venueTime = document.querySelector('#albums')
+//     const positionFooter= footerTime.getBoundingClientRect()
+//     const positionVenue = venueTime.getBoundingClientRect()
+//     audioSinCara.pause()
+//     audioSinCara.volume = 0
 
-    if (positionVenue.top <= window.innerHeight){
-        audioSinCara.play()
-        audioSinCara.volume = 0.1
+//     if (positionVenue.top <= window.innerHeight){
+//         audioSinCara.play()
+//         audioSinCara.volume = 0.1
         
-    }
+//     }
 
-    if (positionFooter.top <= window.innerHeight) {
+//     if (positionFooter.top <= window.innerHeight) {
 
-        audioSinCara.pause()
-        audioSinCara.remove()
-    } 
-}
+//         audioSinCara.pause()
+//         audioSinCara.remove()
+//     } 
+// }
 
 function storyParallax() {
     const storyDiv = document.querySelector(".about-story")
@@ -185,8 +185,8 @@ window.onload = loadParallax
 window.onload = buttonScale
 // document.addEventListener("scroll", playToBeReal)
 // document.addEventListener("touchmove", playToBeReal)
-document.addEventListener("scroll", playSinCara)
-document.addEventListener("touchmove", playSinCara)
+// document.addEventListener("scroll", playSinCara)
+// document.addEventListener("touchmove", playSinCara)
 document.addEventListener("scroll", homeParallax);
 document.addEventListener("scroll", welcomeTitlesParallax)
 document.addEventListener("scroll", venueImgsParallax)
