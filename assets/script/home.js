@@ -71,21 +71,21 @@ function equationParallax() {
     }
 }
 
-function playToBeReal(){
-    const audioToBeReal = document.querySelector('#top-audio')
-    const storyTime = document.querySelector('#story')
-    const heroTime = document.querySelector('.hero')
-    const positionStory = storyTime.getBoundingClientRect()
-    const positionHero = heroTime.getBoundingClientRect()
+// function playToBeReal(){
+//     const audioToBeReal = document.querySelector('#top-audio')
+//     const storyTime = document.querySelector('#story')
+//     const heroTime = document.querySelector('.hero')
+//     const positionStory = storyTime.getBoundingClientRect()
+//     const positionHero = heroTime.getBoundingClientRect()
 
-    if (positionHero.top <= 0){
-        audioToBeReal.play()
-        audioToBeReal.volume = 0.3
-    }
-    if (positionStory.top <= window.innerHeight) {
-        audioToBeReal.remove()
-    } 
-}
+//     if (positionHero.top <= 0){
+//         audioToBeReal.play()
+//         audioToBeReal.volume = 0.3
+//     }
+//     if (positionStory.top <= window.innerHeight) {
+//         audioToBeReal.remove()
+//     } 
+// }
 
 function playSinCara(){
     const audioSinCara = document.querySelector('#bottom-audio')
@@ -103,6 +103,8 @@ function playSinCara(){
     }
 
     if (positionFooter.top <= window.innerHeight) {
+
+        audioSinCara.pause()
         audioSinCara.remove()
     } 
 }
@@ -181,8 +183,8 @@ function timeCarousel() {
 
 window.onload = loadParallax
 window.onload = buttonScale
-document.addEventListener("scroll", playToBeReal)
-document.addEventListener("touchmove", playToBeReal)
+// document.addEventListener("scroll", playToBeReal)
+// document.addEventListener("touchmove", playToBeReal)
 document.addEventListener("scroll", playSinCara)
 document.addEventListener("touchmove", playSinCara)
 document.addEventListener("scroll", homeParallax);
