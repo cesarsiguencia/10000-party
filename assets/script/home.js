@@ -87,7 +87,7 @@ function playToBeReal(){
     } 
 }
 
-var setAlbums = false
+var setAlbums = falses
 
 function playSinCara(){
     const audioSinCara = document.querySelector('#bottom-audio')
@@ -95,6 +95,8 @@ function playSinCara(){
     const venueTime = document.querySelector('#albums')
     const positionFooter= footerTime.getBoundingClientRect()
     const positionVenue = venueTime.getBoundingClientRect()
+    audioSinCara.pause()
+    audioSinCara.volume = 0
 
     if (positionVenue.top <= window.innerHeight){
         audioSinCara.play()
