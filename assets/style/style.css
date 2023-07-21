@@ -171,7 +171,8 @@ a {
 }
 
 .welcome-box {
-    backdrop-filter: blur(2px);
+    transition: ease-in-out 1s;
+    backdrop-filter: blur(0px);
 }
 
 .welcome-titles {
@@ -295,6 +296,13 @@ nav {
     width: 100%;
     flex-shrink: 0;
     transition: ease-in-out 1s;
+}
+
+.dashboard-posts > img {
+    display: block;
+    margin: 0 auto;
+    height: 600px;
+    width: 600px;
 }
 
 
@@ -443,6 +451,10 @@ footer {
     justify-content: space-between;
 }
 
+.footer-right{
+  text-align: right;
+}
+
 /* FORM PAGE --------------------------*/
 /* Fill Out Form */
 
@@ -550,6 +562,10 @@ footer {
         height: 300px;
     }
 
+    .equation{
+        width: 100%;
+    }
+
 
     .mobile-toggle {
         width: 100%;
@@ -601,6 +617,8 @@ footer {
         transition: all 0.5s ease-in-out;
         transform: translateY(-10px) rotate(-45deg);
     }
+
+
 }
 
 @media screen and (max-width: 650px) {
@@ -608,8 +626,9 @@ footer {
         display: block;
     }
 
-    .footer-flex>div {
+    .footer-flex>div , .footer-right {
         text-align: center;
+        margin: 10px auto;
     }
 
     .full-width {
@@ -628,6 +647,11 @@ footer {
     .dashboard > *{
         width: 90%;
         margin: 10px auto;
+    }
+
+    .dashboard-posts > img{
+        height: 300px;
+        width: 300px
     }
 }
 
@@ -653,4 +677,5 @@ footer {
     .intro-div>div {
         padding: 20px 0px 20px 0px;
     }
+
 }

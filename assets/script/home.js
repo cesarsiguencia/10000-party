@@ -6,11 +6,12 @@ var dashboard = document.querySelector('.dashboard-carousel')
 var barHeight = ""
 var selectedElement = ""
 var dummyForm = document.querySelector('.registration')
+const hero = document.querySelector(".hero")
+hero.style.height = "120vh";
 
 function homeParallax(event) {
     const hero = document.querySelector(".hero")
     const scrollPosition = event.target.scrollingElement.scrollTop;
-
     if (scrollPosition > 20) {
         hero.style.height = "100vh";
     } else {
@@ -21,6 +22,7 @@ function homeParallax(event) {
 function loadParallax(event) {
     const hero = document.querySelector(".hero")
     hero.style.height = "120vh";
+    event.target.scrollingElement.scrollTop = 0
 }
 
 function welcomeTitlesParallax(event) {
@@ -50,11 +52,11 @@ function venueImgsParallax() {
     if (position.top >= window.innerHeight ) {
 
         imgsArray.forEach((image)=>{
-            image.style.backgroundSize = "110%"
+            image.style.backgroundSize = "140%"
         })
     } else {
         imgsArray.forEach((image)=>{
-            image.style.backgroundSize = "100%"
+            image.style.backgroundSize = "110%"
         })
     }
 }
@@ -67,6 +69,42 @@ function equationParallax() {
     } else {
         equationDiv.style.scale = 0.75
     }
+}
+
+function playToBeReal(){
+    const audioToBeReal = document.querySelector('#top-audio')
+    const storyTime = document.querySelector('#story')
+    const heroTime = document.querySelector('.hero')
+    const positionStory = storyTime.getBoundingClientRect()
+    const positionHero = heroTime.getBoundingClientRect()
+
+    if (positionHero.top <= 0){
+        audioToBeReal.play()
+        audioToBeReal.volume = 0.3
+    }
+    if (positionStory.top <= window.innerHeight) {
+        audioToBeReal.remove()
+    } 
+}
+
+var setAlbums = false
+
+function playSinCara(){
+    const audioSinCara = document.querySelector('#bottom-audio')
+    const footerTime = document.querySelector('#signUp')
+    const venueTime = document.querySelector('#albums')
+    const positionFooter= footerTime.getBoundingClientRect()
+    const positionVenue = venueTime.getBoundingClientRect()
+
+    if (positionVenue.top <= window.innerHeight){
+        audioSinCara.play()
+        audioSinCara.volume = 0.1
+        
+    }
+
+    if (positionFooter.top <= window.innerHeight) {
+        audioSinCara.remove()
+    } 
 }
 
 function storyParallax() {
@@ -94,7 +132,6 @@ function buttonScale (){
 }
 
 function buttonDown (){
-    
     setInterval(() => {
         buttons.forEach((single)=>{
             single.style.scale = 1.0
@@ -102,14 +139,55 @@ function buttonDown (){
     }, 2000);
 }
 
+var x = 1
+// var y = 0
+
+function timeCarousel() {
+    // y = y + 1
+
+
+    // if (x == 1) {
+    //     y = 0
+        if (x < 7) {
+            posts.forEach((post) => {
+                post.style.transform = `translate(-${x}00%)`
+            })
+            x = x +1
+            return
+        }
+
+    
+        if (x == 7) {
+            posts.forEach((post) => {
+                post.style.transform = "translate(0%)"
+            })
+            x = 1
+            return
+        }
+        setInterval(timeCarousel, 4000)
+        console.log('worked')
+
+    // }
+    
+}
+    
+
+
+
+
+
 
 // Home Page Function calls
+
 window.onload = loadParallax
 window.onload = buttonScale
+document.addEventListener("scroll", playToBeReal)
+document.addEventListener("touchmove", playToBeReal)
+document.addEventListener("scroll", playSinCara)
+document.addEventListener("touchmove", playSinCara)
 document.addEventListener("scroll", homeParallax);
 document.addEventListener("scroll", welcomeTitlesParallax)
 document.addEventListener("scroll", venueImgsParallax)
 document.addEventListener("scroll", equationParallax)
 document.addEventListener("scroll", storyParallax)
-
-
+setInterval(timeCarousel, 2000)

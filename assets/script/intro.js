@@ -24,17 +24,34 @@ function changeWords(currentIndex) {
 }
 
 function insertHomeBtn() {
+    welcomeBox.style = 'backdrop-filter: blur(2px)'
     var buttonItem = document.createElement("a")
+    
     buttonItem.className = 'welcome-button'
     buttonItem.innerHTML = '<p class="welcome-button-font text-center copperplate-font">Click here for awesomeness</p> '
     welcomeBox.appendChild(buttonItem)
 }
 
+const introAudio = document.querySelector('#intro-audio')
+
 function appearButton() {
     var button = document.querySelector(".welcome-button")
-    button.setAttribute("href", "homepage.html")
     button.style.opacity = 1
+
+    button.addEventListener("click", ()=>{
+        welcomeBox.style.transition = 'ease-in-out 2s'
+        welcomeBox.style.scale = 5
+        welcomeBox.style.opacity = 0
+        introAudio.play()
+        introAudio.volume = 0.5
+
+        setTimeout((()=>{
+            window.location.href = './homepage.html'
+        }
+        ), 4500)
+    })
 }
+
 
 
 function introParallax(event) {
@@ -60,3 +77,4 @@ document.addEventListener("scroll", introParallax);
 setTimeout(changeWords, 1000, 0)
 setTimeout("insertHomeBtn()", 1000)
 setTimeout("appearButton()", 12000)
+
