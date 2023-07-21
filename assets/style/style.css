@@ -492,6 +492,11 @@ footer {
 	padding: 15px;
 }
 
+#audio-trigger{
+    display: block; 
+    border: 3px white dotted"
+}
+
 /* Media Queries ------------------------- */
 
 @media screen and (max-width: 1600px) {
