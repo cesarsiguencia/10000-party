@@ -23,6 +23,44 @@
 <script type="text/javascript" src="./assets/script/flipclock.js"></script>
 <style text="text/css">body .flip-clock-wrapper ul li a div div.inn, body .flip-clock-small-wrapper ul li a div div.inn { color: #CCCCCC; background-color: #333333; } body .flip-clock-dot, body .flip-clock-small-wrapper .flip-clock-dot { background: #323434; } body .flip-clock-wrapper .flip-clock-meridium a, body .flip-clock-small-wrapper .flip-clock-meridium a { color: #323434; }</style> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link type="text/css" rel="stylesheet" href="./assets/style/flipclock.css" />
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/script/flipclock.js"></script>
+    <style text="text/css">
+        body .flip-clock-wrapper ul li a div div.inn,
+        body .flip-clock-small-wrapper ul li a div div.inn {
+            color: #CCCCCC;
+            background-color: #333333;
+        }
+
+        body .flip-clock-dot,
+        body .flip-clock-small-wrapper .flip-clock-dot {
+            background: #323434;
+        }
+
+        body .flip-clock-wrapper .flip-clock-meridium a,
+        body .flip-clock-small-wrapper .flip-clock-meridium a {
+            color: #323434;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            FlipClock.Lang.Custom = { days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds' };
+            var opts = {
+                clockFace: 'DailyCounter',
+                countdown: true,
+                language: 'Custom'
+            };
+            var countdown = 1697922000 - ((new Date().getTime()) / 1000); // from: 10/21/2023 09:00 pm +0000
+            countdown = Math.max(1, countdown);
+            $('.clock-builder-output').FlipClock(countdown, opts);
+        });
+    </script>
+
+
     <title>10,000 Day Bash!</title>
 </head>
 
@@ -70,11 +108,11 @@
                 <div class="full-width">
 
                     <iframe class="video margin-center"
-                        src="https://drive.google.com/file/d/1lCYLLaA53njsw7hsxaJwYBTa37tuQ0y8/preview" width="100%"
+                        src="https://drive.google.com/file/d/1K8uiPAUWQlXb4w9debv3mju2Zt_NyDC7/preview" width="100%"
                         allow="autoplay"></iframe>
 
                 </div>
-
+                <h2 style="margin: 10px auto">AND THE COUNDOWN BEGINS! </h2>
                 <div class="clock-builder-output"></div>
 
                 <div class="dashboard margin-center">
@@ -168,7 +206,7 @@
             <br />
             <h2 style="font-weight: bold">BACHATA!!!</h2>
             <br />
-            <h2 id="audio-trigger" style="color:black; font-weight: bold"> * CLICK THIS FONT TO START DANCING NOW! *
+            <h2 id="audio-trigger" style="color:red; font-weight: bold"> * CLICK THIS FONT TO START DANCING NOW! *
             </h2>
             <br />
             <div class="dashboard-carousel flex-row ">
@@ -274,7 +312,7 @@
 
                         <p style="font-weight: bold; color: greenyellow"> ** Due to a maximum occupancy at the space,
                             this is a private event and priority is currently for invited guests. But please don't be
-                            shy and ask me if you wish to bring an extra. I could squeeze them in much later **</p>
+                            shy and ask me if you wish to bring an extra. I could potentially squeeze them in much later **</p>
                         <br />
                         <br />
 
@@ -283,7 +321,7 @@
                         <br />
                         <br />
 
-                        <h2 style="font-weight: bold" class="text-center">NO ID, no party, (aka MUST BE 21 or older)
+                        <h2 style="font-weight: bold" class="text-center">NO ID, no party, (aka MUST PROVIDE PROOF OF BEING 21 or older)
                         </h2>
 
                         <br />
@@ -291,7 +329,7 @@
                         <p>NOTE: For our friends out of town, please plan your own over night hospitality
                             arrangements. If you need suggestions for where to stay, don't hesistate to ask me. </p>
                         <br />
-                        <p>NOTE: No need to BYOB or snacks. That will be provided by me and the space. You're welcome =]
+                        <p>NOTE: No need to BYOB or snacks. Catering provided by me and the space. You're welcome =]
                         </p>
 
                     </div>
