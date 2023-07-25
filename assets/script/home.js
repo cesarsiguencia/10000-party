@@ -189,7 +189,18 @@ function timeCarousel() {
     // }
     
 }
-    
+
+function handleTickInit(tick) {
+    Tick.helper.interval(function(){
+        var d = Tick.helper.date(); 
+        tick.value = {
+            sep: '.',
+            hours: d.getHours(),
+            minutes: d.getMinutes(),
+            seconds: d.getSeconds()
+        };
+    });
+  }
 
 
 
@@ -200,6 +211,7 @@ function timeCarousel() {
 
 window.onload = loadParallax
 window.onload = buttonScale
+handleTickInit()
 // document.addEventListener("scroll", playToBeReal)
 // document.addEventListener("touchmove", playToBeReal)
 audioButton.addEventListener("click", playSinCara)
