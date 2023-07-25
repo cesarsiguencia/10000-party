@@ -19,6 +19,44 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link type="text/css" rel="stylesheet" href="./assets/style/flipclock.css" />
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/script/flipclock.js"></script>
+    <style text="text/css">
+        body .flip-clock-wrapper ul li a div div.inn,
+        body .flip-clock-small-wrapper ul li a div div.inn {
+            color: #CCCCCC;
+            background-color: #333333;
+        }
+
+        body .flip-clock-dot,
+        body .flip-clock-small-wrapper .flip-clock-dot {
+            background: #323434;
+        }
+
+        body .flip-clock-wrapper .flip-clock-meridium a,
+        body .flip-clock-small-wrapper .flip-clock-meridium a {
+            color: #323434;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            FlipClock.Lang.Custom = { days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds' };
+            var opts = {
+                clockFace: 'DailyCounter',
+                countdown: true,
+                language: 'Custom'
+            };
+            var countdown = 1697922000 - ((new Date().getTime()) / 1000); // from: 10/21/2023 09:00 pm +0000
+            countdown = Math.max(1, countdown);
+            $('.clock-builder-output').FlipClock(countdown, opts);
+        });
+    </script>
+
+
     <title>10,000 Day Bash!</title>
 </head>
 
@@ -44,8 +82,7 @@
             <a class="nav-links" id="#venue" href="./homepage.html#venue">
                 <div class="nav-links-selected" id="#venue">The Venue</div>
             </a>
-            <a class="nav-links highlighted-options"
-                target="_blank" href="https://partiful.com/e/TLXPMP1giM8tMiVIbcja">
+            <a class="nav-links highlighted-options" target="_blank" href="https://partiful.com/e/TLXPMP1giM8tMiVIbcja">
                 <div class="nav-links-selected" id="#signUp">Reserve by Sep 1st</div>
             </a>
         </nav>
@@ -66,9 +103,14 @@
                 <h2 class="intro-title">Welcome To My 10,000 Days Of Life!</h2>
                 <div class="full-width">
 
-                        <iframe class="video margin-center" src="https://drive.google.com/file/d/1lCYLLaA53njsw7hsxaJwYBTa37tuQ0y8/preview" width="100%" allow="autoplay"></iframe>
+                    <iframe class="video margin-center"
+                        src="https://drive.google.com/file/d/1K8uiPAUWQlXb4w9debv3mju2Zt_NyDC7/preview" width="100%"
+                        allow="autoplay"></iframe>
 
                 </div>
+                <h2 style="margin: 10px auto">AND THE COUNDOWN BEGINS! </h2>
+                <div class="clock-builder-output"></div>
+
                 <div class="dashboard margin-center">
                     <button type="submit" class="highlighted-options text-center margin-center">
                         <a type="submit" href="https://partiful.com/e/TLXPMP1giM8tMiVIbcja">
@@ -83,11 +125,17 @@
             <div class="about-story">
                 <h3>Why?... How?... Really?... The True Story</h3>
                 <p>
-                    Every year, the majority of us enjoy celebrating our birthdays in numerous ways. For as long as human beings have existed, we have normalized to celebrate that day as a reminder that we are indeed, getting older. I am all down for celebration. But honestly speaking, birthday celebrations have become too repetitive and mundane if the same thing happens every 365 days. In other words, it has
+                    Every year, the majority of us enjoy celebrating our birthdays in numerous ways. For as long as
+                    human beings have existed, we have normalized to celebrate that day as a reminder that we are
+                    indeed, getting older. I am all down for celebration. But honestly speaking, birthday celebrations
+                    have become too repetitive and mundane if the same thing happens every 365 days. In other words, it
+                    has
                     become predictable and calculated.
                     <br />
                     <br />
-                    I miss giving true meaning to celebration-worthy events. For me, it has to be an event that is worthy enough of a celebration of a lifetime. An important milestone that is unique, special, one of a kind, and memorable. It must be an event that questions the
+                    I miss giving true meaning to celebration-worthy events. For me, it has to be an event that is
+                    worthy enough of a celebration of a lifetime. An important milestone that is unique, special, one of
+                    a kind, and memorable. It must be an event that questions the
                     status quo and everything we know. And above all, it must be an event that is of course,
                     "EXTRA" for me and all fortunate enough to come. This is that event.
                     <br />
@@ -97,7 +145,8 @@
                     <br />
                     One night about a year ago, my nightly fantasies and thoughts kept me from falling asleep as they
                     occasionally do. As I laid awake that night thinking about my place in the universe, I
-                    began thinking about my age in days. So quickly, I googled a date calculator and no surprise, I got a big number in the realms of 9,500!
+                    began thinking about my age in days. So quickly, I googled a date calculator and no surprise, I got
+                    a big number in the realms of 9,500!
                     <br />
                     <br />
                     "Wow! That's so close to 10,000 days!" I thought, " So what would that day be...?",
@@ -119,10 +168,11 @@
                     As if fate already had me destined to celebrate this experience with great people (you) on a day no
                     better
                     than a Saturday, the weekend!
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     I am going to give it my all and be grateful that I have experienced
-                    10,000 mornings and evenings and do so with the very best of people to make it a night that puts all my
+                    10,000 mornings and evenings and do so with the very best of people to make it a night that puts all
+                    my
                     previous
                     birthday gatherings to shame.
                     <br />
@@ -146,50 +196,51 @@
             <h2>Including RnB, Hip Hop, Disco, 2000s, </h2>
             <br />
             <h2>And of course...</h2>
-            <br/>
+            <br />
             <h2 style="font-weight: bold">BACHATA!!!</h2>
-            <br/>
-            <h2 id="audio-trigger" style="color:black; font-weight: bold"> * CLICK THIS FONT TO START DANCING NOW! *</h2>
-            <br/>
+            <br />
+            <h2 id="audio-trigger" style="color:red; font-weight: bold"> * CLICK THIS FONT TO START DANCING NOW! *
+            </h2>
+            <br />
             <div class="dashboard-carousel flex-row ">
 
                 <div class="dashboard-posts">
-                   <img src="./assets/media/albums/Prince Royce.png"/>
-                   
+                    <img src="./assets/media/albums/Prince Royce.png" />
+
                 </div>
 
                 <div class="dashboard-posts">
-                    <img src="./assets/media/albums/Culture II.png"/>
-                 </div>
+                    <img src="./assets/media/albums/Culture II.png" />
+                </div>
 
-                 <div class="dashboard-posts">
-                    <img src="./assets/media/albums/The Blueprint 3.png"/>
-                 </div>
+                <div class="dashboard-posts">
+                    <img src="./assets/media/albums/The Blueprint 3.png" />
+                </div>
 
-                 <div class="dashboard-posts">
-                    <img src="./assets/media/albums/Thriller.jpg"/>
-                 </div>
+                <div class="dashboard-posts">
+                    <img src="./assets/media/albums/Thriller.jpg" />
+                </div>
 
-                 <div class="dashboard-posts">
-                    <img src="./assets/media/albums/Pink Friday.jpg"/>
-                 </div>
-                
-                 <div class="dashboard-posts">
-                    <img src="./assets/media/albums/Year Of The Gentleman.jpg"/>
-                 </div>
+                <div class="dashboard-posts">
+                    <img src="./assets/media/albums/Pink Friday.jpg" />
+                </div>
 
-                       
-                 <div class="dashboard-posts">
-                    <img src="./assets/media/albums/Party In The USA- Single.jpg"/>
-                 </div>
+                <div class="dashboard-posts">
+                    <img src="./assets/media/albums/Year Of The Gentleman.jpg" />
+                </div>
+
+
+                <div class="dashboard-posts">
+                    <img src="./assets/media/albums/Party In The USA- Single.jpg" />
+                </div>
             </div>
-            <br/>
+            <br />
         </div>
 
         <div style="background-color: rgba(40, 40, 40); padding: 25px 0">
             <h3> You are all expected to dance with me, no excuses </h3>
-            <br/>
-             <h3>SO GET READY TO DANCE YOUR BOTTOMS OFF!!!</h3>  
+            <br />
+            <h3>SO GET READY TO DANCE YOUR BOTTOMS OFF!!!</h3>
         </div>
 
         <section class="section-venue" id="venue">
@@ -219,7 +270,8 @@
 
                         <div class="venue-info-blocks margin-center">
                             <p>We will unite at the Meaux Space in New York City, footsteps away from the Empire State
-                                Building and Madison Square Garden with a view of Hudson Yards, a full size kitchen, and balcony. </p>
+                                Building and Madison Square Garden with a view of Hudson Yards, a full size kitchen, and
+                                balcony. </p>
                             <br>
                             <p>A 5 minute walk from New York Penn Station and a 12 minute walk from Port Authority Bus
                                 Terminal. One could even come to town for the party and leave on the same day!</p>
@@ -238,33 +290,40 @@
                 </div>
 
                 <div>
-                    <div style = 'text-align: center'>
+                    <div style='text-align: center'>
                         <br />
-                        <p style="font-weight: bold; color: pink">* YOU MUST MAKE A RESERVATION THROUGH THIS LINK TO CLAIM YOUR SLOT. RSVP no later than date indicated in the link. WALK-INS WILL NOT BE ACCEPTED.*</p>
-                        <br />
-                        <br />
-
-                        <p style="font-weight: bold; color: lightblue"> ** All invited guests MUST fill out an RSVP form EACH **</p>
+                        <p style="font-weight: bold; color: pink">* YOU MUST MAKE A RESERVATION THROUGH THIS LINK TO
+                            CLAIM YOUR SLOT. RSVP no later than date indicated in the link. WALK-INS WILL NOT BE
+                            ACCEPTED.*</p>
                         <br />
                         <br />
 
-                        <p style="font-weight: bold; color: greenyellow"> ** Due to a maximum occupancy at the space, this is a private event and priority is currently for invited guests. But please don't be shy and ask me if you wish to bring an extra. I could squeeze them in much later  **</p>
+                        <p style="font-weight: bold; color: lightblue"> ** All invited guests MUST fill out an RSVP form
+                            EACH **</p>
                         <br />
                         <br />
 
-                        <p style="font-weight: bold; color: yellow">*** There is a $30.00 NON REFUNDABLE Entrance Fee per person to be paid in advance by RSVP date, not at door ***</p>
+                        <p style="font-weight: bold; color: greenyellow"> ** Due to a maximum occupancy at the space,
+                            this is a private event and priority is currently for invited guests. But please don't be
+                            shy and ask me if you wish to bring an extra. I could potentially squeeze them in much later **</p>
                         <br />
-                        <br/>
+                        <br />
 
-                        <h2 style="font-weight: bold" class="text-center">NO ID, no party, (aka MUST BE 21 or older)
+                        <p style="font-weight: bold; color: yellow">*** There is a $30.00 NON REFUNDABLE Entrance Fee
+                            per person to be paid in advance by RSVP date, not at door ***</p>
+                        <br />
+                        <br />
+
+                        <h2 style="font-weight: bold" class="text-center">NO ID, no party, (aka MUST PROVIDE PROOF OF BEING 21 or older)
                         </h2>
 
                         <br />
                         <br />
                         <p>NOTE: For our friends out of town, please plan your own over night hospitality
                             arrangements. If you need suggestions for where to stay, don't hesistate to ask me. </p>
-                            <br />
-                            <p>NOTE: No need to BYOB or snacks. That will be provided by me and the space. You're welcome =] </p>
+                        <br />
+                        <p>NOTE: No need to BYOB or snacks. Catering provided by me and the space. You're welcome =]
+                        </p>
 
                     </div>
                     <div class="intro-div flex-column">
@@ -292,7 +351,9 @@
             </div>
             <div class="footer-right">
                 <p>Did you like this website? I coded it!</p>
-                <p>Check out for more Cezzie made projects <a target="_blank" href="https://cesarsiguencia.github.io/my-react-portfolio/" style="color: black; font-weight: bold;">HERE!</a></p>
+                <p>Check out for more Cezzie made projects <a target="_blank"
+                        href="https://cesarsiguencia.github.io/my-react-portfolio/"
+                        style="color: black; font-weight: bold;">HERE!</a></p>
             </div>
         </div>
 
@@ -301,4 +362,5 @@
     <script src="./assets/script/global.js"></script>
     <script src="./assets/script/home.js"></script>
 </body>
+
 </html>
