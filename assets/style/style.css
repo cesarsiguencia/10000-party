@@ -562,10 +562,6 @@ footer {
     .intro-div>div {
         padding: 20px 0px 20px 0px;
     }
-} 
-
-@media screen and (max-width: 768px) {
-
 
     .intro-div {
         width: 95%
@@ -574,6 +570,10 @@ footer {
     .full-width {
         height: 300px;
     }
+} 
+
+@media screen and (max-width: 768px) {
+
 
     .equation{
         width: 100%;
