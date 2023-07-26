@@ -558,7 +558,15 @@ footer {
     }
 }
 
+@media screen and (max-width: 850px){
+    .intro-div>div {
+        padding: 20px 0px 20px 0px;
+    }
+} 
+
 @media screen and (max-width: 768px) {
+
+
     .intro-div {
         width: 95%
     }
@@ -627,6 +635,14 @@ footer {
 }
 
 @media screen and (max-width: 650px) {
+    .full-width{
+        width: 100%;
+    }
+
+    .intro-div>div {
+        padding: 20px 0px 20px 0px;
+    }
+
     .footer-flex {
         display: block;
     }
@@ -667,9 +683,7 @@ footer {
         margin-bottom: 20px;
     }
 
-    .full-width{
-        width: 100%;
-    }
+
 
     .venue-info-blocks>iframe {
         height: 200px;
@@ -679,8 +693,6 @@ footer {
         padding: 20px 0;
     }
 
-    .intro-div>div {
-        padding: 20px 0px 20px 0px;
-    }
+
 
 }
