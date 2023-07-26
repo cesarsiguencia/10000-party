@@ -534,6 +534,13 @@ footer {
     }
 }
 
+@media screen and (max-width: 1200px){
+    .full-width{
+        width: 100%
+    }
+
+}
+
 @media screen and (max-width: 1000px) {
     .venue-split>* {
         width: 100%;
@@ -691,6 +698,10 @@ footer {
 
     .section-venue{
         padding: 20px 0;
+    }
+
+    .full-width{
+        width: 100%
     }
 
 
