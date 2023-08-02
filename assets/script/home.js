@@ -92,27 +92,6 @@ const audioButton = document.querySelector('#audio-trigger')
 const audioSinCara = document.querySelector('#bottom-audio')
 function playSinCara(){
     
-    // const footerTime = document.querySelector('#signUp')
-    // const venueTime = document.querySelector('#albums')
-    // const positionFooter= footerTime.getBoundingClientRect()
-    // const positionVenue = venueTime.getBoundingClientRect()
-    // audioSinCara.pause()
-    // audioSinCara.volume = 0
-
-    
-
-    
-
-    // if (positionVenue.top <= window.innerHeight){
-        
-        
-    // }
-
-    // if (positionFooter.top <= window.innerHeight) {
-
-    //     audioSinCara.pause()
-    //     audioSinCara.remove()
-    // } 
 
     if (playerOn === true){
         audioSinCara.play()

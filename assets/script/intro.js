@@ -26,7 +26,6 @@ function changeWords(currentIndex) {
 function insertHomeBtn() {
     welcomeBox.style = 'backdrop-filter: blur(2px)'
     var buttonItem = document.createElement("a")
-    
     buttonItem.className = 'welcome-button'
     buttonItem.innerHTML = '<p class="welcome-button-font text-center copperplate-font">Click here for audio and awesomeness</p> '
     welcomeBox.appendChild(buttonItem)
@@ -43,7 +42,7 @@ function appearButton() {
         welcomeBox.style.scale = 5
         welcomeBox.style.opacity = 0
         introAudio.play()
-        introAudio.volume = 0.5
+        introAudio.volume = 0.8
 
         setTimeout((()=>{
             window.location.href = './homepage.html'
@@ -77,4 +76,3 @@ document.addEventListener("scroll", introParallax);
 setTimeout(changeWords, 1000, 0)
 setTimeout("insertHomeBtn()", 1000)
 setTimeout("appearButton()", 12000)
-
